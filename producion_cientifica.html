@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Producción Científica — Investigaciones, publicaciones académicas y recursos documentales del proyecto Soy Patrimonio sobre el patrimonio cultural de Sogamoso.">
+    <meta name="theme-color" content="#2c3e50">
+
+    <title>Producción Científica — Soy Patrimonio</title>
+
+    <!-- Fuentes e iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos: Global + Página producción científica -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/producion_cientifica.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/logo_icon.ico">
+</head>
+
+<body>
+
+    <!-- ============================================
+         LOADER
+         ============================================ -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <h2>Cargando Producción Científica...</h2>
+        </div>
+    </div>
+
+    <!-- Partículas de fondo -->
+    <div class="particles-container" aria-hidden="true">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="modern-header" role="banner">
+        <div class="header-container">
+            <a href="index.html" class="logo-container" aria-label="Soy Patrimonio - Inicio">
+                <div class="logo-icon" aria-hidden="true">
+                    <i class="fas fa-landmark"></i>
+                </div>
+
+                <!-- ★★★ Cambiar aquí el título por imagen ★★★
+                     Coloca tu imagen en: assets/img/header.png
+                -->
+                <!-- <img src="assets/img/header.png" alt="Soy Patrimonio Logo" class="logo-img"> -->
+
+                <div class="logo-text">
+                    <h1>SOY PATRIMONIO</h1>
+                    <span>Sogamoso - Descubre, Aprende y Protege</span>
+                </div>
+            </a>
+
+            <nav class="nav-container" aria-label="Navegación principal">
+                <ul class="nav-menu" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="index.html" class="nav-link" role="menuitem">
+                            <i class="fas fa-home"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="mapa-historico.html" class="nav-link" role="menuitem">
+                            <i class="fas fa-map-marked-alt"></i> Mapa Histórico
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none" aria-haspopup="true">
+                        <a href="rincon-estudiantil.html" class="nav-link" role="menuitem" aria-expanded="false">
+                            <i class="fas fa-graduation-cap"></i>
+                            Rincón Estudiantil
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <div class="submenu" role="menu">
+                            <a href="san-martin-menu.html" class="submenu-link" role="menuitem">
+                                <i class="fas fa-university" aria-hidden="true"></i>
+                                San Martín de Tours
+                            </a>
+                            <a href="sugamuxi-menu.html" class="submenu-link" role="menuitem">
+                                <i class="fas fa-school" aria-hidden="true"></i>
+                                Colegio Sugamuxi
+                            </a>
+
+                            <!-- INICIO: Submenú Incandes de tercer nivel -->
+                            <div class="submenu-item has-submenu">
+                                <a href="inceandes-menu.html" class="submenu-link" role="menuitem">
+                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                    Colegio Inceandes
+                                    <i class="fas fa-chevron-right submenu-arrow" aria-hidden="true"></i>
+                                </a>
+                                <!-- Submenú de tercer nivel - Incandes -->
+                                <div class="submenu-third-level" role="menu" aria-label="Submenú Incandes">
+                                    <a href="inceandes-incandes.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-fire" aria-hidden="true"></i>
+                                        Incandes
+                                    </a>
+                                    <a href="inceandes-comunidad.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-users" aria-hidden="true"></i>
+                                        Comunidad
+                                    </a>
+                                    <a href="inceandes-logros.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-trophy" aria-hidden="true"></i>
+                                        Logros
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- FIN: Submenú Incandes de tercer nivel -->
+                        </div>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="Explorando -ciudad.html" class="nav-link" role="menuitem">
+                            <i class="fas fa-city"></i> Explorando la Ciudad
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="producion_cientifica.html" class="nav-link active" role="menuitem">
+                            <i class="fas fa-flask"></i> Producción Científica
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO — Producción Científica
+         ★ Para cambiar la imagen del hero, reemplaza el src del <img> 
+         ============================================ -->
+    <section class="hero" aria-labelledby="heroTitle">
+        <!-- INSERTAR IMAGEN DEL HERO AQUÍ: reemplaza src con la ruta de tu imagen -->
+        <img id="heroImage" src="imagenes/Soggamoso.png" alt="Producción científica sobre el patrimonio de Sogamoso"
+            class="hero-img">
+        <div class="hero-content">
+            <h1 id="heroTitle">Producción Científica</h1>
+            <p id="heroSubtitle">
+                Investigaciones, publicaciones y recursos académicos que fundamentan
+                la valoración y conservación del patrimonio cultural de Sogamoso.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTENIDO PRINCIPAL — Producción Científica
+         
+         Estructura jerárquica:
+         H1 → Producción Científica (en el hero)
+         H2 → Secciones principales
+         H3 → Subsecciones y títulos de publicaciones
+         ============================================ -->
+    <main>
+        <!-- Sección: Marco Teórico -->
+        <section class="academic-section" aria-labelledby="marco-teorico">
+            <div class="academic-container">
+                <h2 id="marco-teorico" class="academic-title">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    Marco Teórico y Conceptual
+                </h2>
+                <div class="academic-content">
+                    <p>
+                        El proyecto <strong>Soy Patrimonio</strong> se fundamenta en un enfoque interdisciplinario
+                        que articula la educación patrimonial, la pedagogía activa y las tecnologías de la información
+                        y la comunicación (TIC) como herramientas para la valoración y conservación del patrimonio
+                        cultural material e inmaterial de Sogamoso, Boyacá.
+                    </p>
+                    <p>
+                        La propuesta pedagógica se enmarca dentro del paradigma constructivista del aprendizaje,
+                        en el cual los estudiantes no son receptores pasivos de información, sino agentes activos
+                        en la construcción de conocimiento significativo sobre su entorno cultural e histórico
+                        (Vygotsky, 1978; Piaget, 1970).
+                    </p>
+
+                    <h3>Fundamentos Conceptuales</h3>
+                    <ul class="academic-list">
+                        <li>
+                            <strong>Patrimonio cultural:</strong> Definido por la UNESCO (2003) como el conjunto
+                            de bienes tangibles e intangibles que constituyen la herencia de un grupo humano
+                            y que refuerzan emocionalmente su sentido de comunidad e identidad.
+                        </li>
+                        <li>
+                            <strong>Educación patrimonial:</strong> Proceso formativo orientado a desarrollar
+                            en los estudiantes la capacidad de identificar, comprender, valorar y difundir
+                            los bienes patrimoniales de su entorno próximo (Fontal, 2013).
+                        </li>
+                        <li>
+                            <strong>Aprendizaje situado:</strong> Metodología que privilegia la interacción
+                            directa con el contexto sociocultural como medio para la construcción de
+                            aprendizajes significativos (Lave & Wenger, 1991).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Publicaciones y Referencias -->
+        <section class="academic-section academic-section--alt" aria-labelledby="publicaciones">
+            <div class="academic-container">
+                <h2 id="publicaciones" class="academic-title">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    Publicaciones y Referencias Bibliográficas
+                </h2>
+                <div class="academic-content">
+                    <p>
+                        Las siguientes publicaciones constituyen el acervo documental que sustenta las actividades
+                        pedagógicas e investigativas del proyecto. Cada referencia ha sido seleccionada por su
+                        relevancia para la comprensión del patrimonio cultural sogamoseño.
+                    </p>
+
+                    <!-- Referencia 1 -->
+                    <article class="reference-card">
+                        <div class="reference-type">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            <span>Artículo de investigación</span>
+                        </div>
+                        <h3>Informe del Patrimonio Cultural de Sogamoso 2024</h3>
+                        <p class="reference-authors">Autor(es): Equipo investigador Soy Patrimonio</p>
+                        <p class="reference-abstract">
+                            Documento que sistematiza los hallazgos de la investigación de campo realizada
+                            en los principales sitios patrimoniales de la ciudad, incluyendo análisis
+                            arquitectónico, reseñas históricas y propuestas de conservación participativa.
+                        </p>
+                        <div class="reference-meta">
+                            <span><i class="fas fa-calendar" aria-hidden="true"></i> 2024</span>
+                            <span><i class="fas fa-file" aria-hidden="true"></i> PDF — 2.3 MB</span>
+                        </div>
+                    </article>
+
+                    <!-- Referencia 2 -->
+                    <article class="reference-card">
+                        <div class="reference-type">
+                            <i class="fas fa-file-word" aria-hidden="true"></i>
+                            <span>Investigación cualitativa</span>
+                        </div>
+                        <h3>Memoria Histórica y Patrimonio Inmaterial de la Región</h3>
+                        <p class="reference-authors">Autor(es): Investigadores asociados</p>
+                        <p class="reference-abstract">
+                            Estudio etnográfico sobre las tradiciones orales, prácticas culturales y
+                            manifestaciones inmateriales que conforman la identidad cultural de los
+                            habitantes de Sogamoso y el Valle de Sugamuxi.
+                        </p>
+                        <div class="reference-meta">
+                            <span><i class="fas fa-calendar" aria-hidden="true"></i> 2023</span>
+                            <span><i class="fas fa-file" aria-hidden="true"></i> PDF — 3.7 MB</span>
+                        </div>
+                    </article>
+
+                    <!-- Referencia 3 -->
+                    <article class="reference-card">
+                        <div class="reference-type">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            <span>Análisis técnico</span>
+                        </div>
+                        <h3>Análisis Arquitectónico del Centro Histórico</h3>
+                        <p class="reference-authors">Autor(es): Equipo interdisciplinario</p>
+                        <p class="reference-abstract">
+                            Estudio detallado de los estilos arquitectónicos presentes en el centro
+                            histórico de Sogamoso, con énfasis en las edificaciones de los siglos XVIII
+                            y XIX. Incluye documentación fotográfica, levantamientos planimétricos
+                            y recomendaciones para su conservación y puesta en valor.
+                        </p>
+                        <div class="reference-meta">
+                            <span><i class="fas fa-calendar" aria-hidden="true"></i> 2024</span>
+                            <span><i class="fas fa-file" aria-hidden="true"></i> PDF — 5.0 MB</span>
+                        </div>
+                    </article>
+
+                    <!-- Referencia 4 -->
+                    <article class="reference-card">
+                        <div class="reference-type">
+                            <i class="fas fa-file-word" aria-hidden="true"></i>
+                            <span>Propuesta pedagógica</span>
+                        </div>
+                        <h3>Propuesta de Conservación Participativa para el Patrimonio Local</h3>
+                        <p class="reference-authors">Autor(es): Equipo docente Soy Patrimonio</p>
+                        <p class="reference-abstract">
+                            Documento metodológico que presenta estrategias de conservación participativa
+                            aplicables en contextos educativos, orientadas a vincular a la comunidad
+                            estudiantil en la protección activa del patrimonio cultural.
+                        </p>
+                        <div class="reference-meta">
+                            <span><i class="fas fa-calendar" aria-hidden="true"></i> 2024</span>
+                            <span><i class="fas fa-file" aria-hidden="true"></i> DOCX — 2.0 MB</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Repositorio de Archivos -->
+        <section class="file-display" aria-labelledby="repositorio">
+            <div class="file-display-container">
+                <h2 id="repositorio">Repositorio Digital de Archivos</h2>
+
+                <div class="controls-wrapper">
+                    <div class="search-container">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input id="search" type="search" placeholder="Buscar por nombre de archivo..."
+                            aria-label="Buscar archivos">
+                    </div>
+
+                    <div id="filters" role="group" aria-label="Filtrar por tipo">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-th" aria-hidden="true"></i> Todos
+                        </button>
+                        <button class="filter-btn" data-filter="docs">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i> Documentos
+                        </button>
+                        <button class="filter-btn" data-filter="images">
+                            <i class="fas fa-image" aria-hidden="true"></i> Imágenes
+                        </button>
+                        <button class="filter-btn" data-filter="videos">
+                            <i class="fas fa-video" aria-hidden="true"></i> Videos
+                        </button>
+                    </div>
+
+                    <div class="sort-container">
+                        <label for="sort">
+                            <i class="fas fa-sort" aria-hidden="true"></i> Ordenar:
+                        </label>
+                        <select id="sort">
+                            <option value="name">Nombre</option>
+                            <option value="size">Tamaño</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="fileCount" class="file-count" aria-live="polite"></div>
+                <ul id="fileList" aria-label="Lista de archivos"></ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para preview -->
+    <div id="previewModal" class="modal" role="dialog" aria-modal="true" aria-label="Vista previa del archivo">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Cerrar vista previa">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="modern-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>SOY PATRIMONIO</h3>
+                <p>
+                    Plataforma educativa interactiva diseñada para que los niños descubran,
+                    valoren y protejan el patrimonio histórico y cultural.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/soypatrimonio" class="social-link" aria-label="Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explorar</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="mapa-historico.html"><i class="fas fa-map-marker-alt"></i> Mapa Histórico</a></li>
+                    <li><a href="rincon-estudiantil.html"><i class="fas fa-graduation-cap"></i> Rincón Estudiantil</a>
+                    </li>
+                    <li><a href="Explorando -ciudad.html"><i class="fas fa-city"></i> Explorando la Ciudad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Colegios</h3>
+                <ul class="footer-links">
+                    <li><a href="san-martin-menu.html"><i class="fas fa-university"></i> San Martín de Tours</a></li>
+                    <li><a href="sugamuxi-menu.html"><i class="fas fa-school"></i> Colegio Sugamuxi</a></li>
+                    <li><a href="inceandes-menu.html"><i class="fas fa-school"></i> Colegio Inceandes</a></li>
+                    <li><a href="producion_cientifica.html"><i class="fas fa-flask"></i> Producción Científica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:info@soypatrimonio.org"><i class="fas fa-envelope"></i>
+                            info@soypatrimonio.org</a></li>
+                    <li><a href="tel:+573001234567"><i class="fas fa-phone"></i> +57 300 123 4567</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Sogamoso, Boyacá</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Soy Patrimonio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/global.js"></script>
+    <script src="js/producion_cientifica.js"></script>
+</body>
+
+</html>

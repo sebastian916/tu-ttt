@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explorando la Ciudad — Línea de tiempo de las experiencias de visita patrimonial de los estudiantes por los rincones históricos de Sogamoso.">
+    <meta name="theme-color" content="#2c3e50">
+
+    <title>Explorando la Ciudad — Soy Patrimonio</title>
+
+    <!-- Fuentes e iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos: Global + Explorando Ciudad -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/Explorando -ciudad.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/logo_icon.ico">
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <h2>Cargando...</h2>
+        </div>
+    </div>
+
+    <!-- Partículas -->
+    <div class="particles-container" aria-hidden="true">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="modern-header" role="banner">
+        <div class="header-container">
+            <a href="index.html" class="logo-container" aria-label="Soy Patrimonio - Inicio">
+                <div class="logo-icon" aria-hidden="true">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <!-- ★★★ Cambiar aquí el título por imagen ★★★ -->
+                <!-- <img src="assets/img/header.png" alt="Soy Patrimonio Logo" class="logo-img"> -->
+                <div class="logo-text">
+                    <h1>SOY PATRIMONIO</h1>
+                    <span>Sogamoso - Descubre, Aprende y Protege</span>
+                </div>
+            </a>
+
+            <nav class="nav-container" aria-label="Navegación principal">
+                <ul class="nav-menu" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="index.html" class="nav-link" role="menuitem">
+                            <i class="fas fa-home"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="mapa-historico.html" class="nav-link" role="menuitem">
+                            <i class="fas fa-map-marked-alt"></i> Mapa Histórico
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none" aria-haspopup="true">
+                        <a href="rincon-estudiantil.html" class="nav-link" role="menuitem" aria-expanded="false">
+                            <i class="fas fa-graduation-cap"></i>
+                            Rincón Estudiantil
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <div class="submenu" role="menu">
+                            <a href="san-martin-menu.html" class="submenu-link" role="menuitem">
+                                <i class="fas fa-university" aria-hidden="true"></i>
+                                San Martín de Tours
+                            </a>
+                            <a href="sugamuxi-menu.html" class="submenu-link" role="menuitem">
+                                <i class="fas fa-school" aria-hidden="true"></i>
+                                Colegio Sugamuxi
+                            </a>
+
+                            <!-- INICIO: Submenú Incandes de tercer nivel -->
+                            <div class="submenu-item has-submenu">
+                                <a href="inceandes-menu.html" class="submenu-link" role="menuitem">
+                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                    Colegio Inceandes
+                                    <i class="fas fa-chevron-right submenu-arrow" aria-hidden="true"></i>
+                                </a>
+                                <!-- Submenú de tercer nivel - Incandes -->
+                                <div class="submenu-third-level" role="menu" aria-label="Submenú Incandes">
+                                    <a href="inceandes-incandes.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-fire" aria-hidden="true"></i>
+                                        Incandes
+                                    </a>
+                                    <a href="inceandes-comunidad.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-users" aria-hidden="true"></i>
+                                        Comunidad
+                                    </a>
+                                    <a href="inceandes-logros.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-trophy" aria-hidden="true"></i>
+                                        Logros
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- FIN: Submenú Incandes de tercer nivel -->
+                        </div>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="Explorando -ciudad.html" class="nav-link active" role="menuitem">
+                            <i class="fas fa-city"></i> Explorando la Ciudad
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="producion_cientifica.html" class="nav-link" role="menuitem">
+                            <i class="fas fa-flask"></i> Producción Científica
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO
+         ============================================ -->
+    <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-content">
+            <h1 id="hero-title" class="hero-title">EXPLORANDO LA CIUDAD</h1>
+            <p class="hero-subtitle">
+                Un recorrido por la historia patrimonial de Sogamoso a través de los ojos
+                de sus estudiantes. Conoce cada experiencia en nuestra línea de tiempo.
+            </p>
+            <a href="#timeline" class="cta-button">
+                <i class="fas fa-compass" aria-hidden="true"></i>
+                EXPLORAR LÍNEA DE TIEMPO
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         LÍNEA DE TIEMPO — Contenido principal
+         Estructura vertical con eventos alternados (izquierda/derecha)
+         
+         ★ PARA AGREGAR NUEVOS EVENTOS:
+         Copia uno de los bloques <article class="timeline-event"> y modifica:
+         - data-year: el año del evento
+         - <h3>: título del evento
+         - <p>: descripción
+         - <img src="...">: imagen del evento (coloca nuevas imágenes en /imagenes/)
+         ============================================ -->
+    <main>
+        <section class="timeline-section" id="timeline" aria-labelledby="timeline-title">
+            <div class="timeline-container">
+                <h2 id="timeline-title" class="section-title">
+                    <i class="fas fa-clock" aria-hidden="true"></i>
+                    Línea de Tiempo — Visitas Patrimoniales
+                </h2>
+                <p class="section-subtitle">
+                    Cada estación representa un momento especial en nuestro recorrido por los
+                    lugares más emblemáticos de Sogamoso.
+                </p>
+
+                <!-- Línea central de la timeline -->
+                <div class="timeline" role="list" aria-label="Línea de tiempo de visitas">
+
+                    <!-- ★ Evento: Parque El Laguito ★ -->
+                    <article class="timeline-event" data-year="Estación 1" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-year-badge">Parque El Laguito</div>
+                            <div class="timeline-body">
+                                <div class="timeline-text">
+                                    <h3>Parque El Laguito — Nuestra Primera Estación</h3>
+                                    <p>
+                                        El Parque La Laguna, conocido cariñosamente como «El Laguito», es uno de los
+                                        espacios patrimoniales más importantes y queridos de Sogamoso. Este emblemático
+                                        parque ha sido testigo de la transformación urbana y social de la ciudad durante
+                                        décadas, convirtiéndose en un símbolo de identidad para los sogamoseños.
+                                    </p>
+                                    <p>
+                                        Originalmente parte de una antigua estancia, el área fue transformada en parque
+                                        público en la década de 1960. Desde entonces, se ha consolidado como el
+                                        principal
+                                        punto de encuentro familiar, espacio de recreación y pulmón verde del centro de
+                                        la ciudad.
+                                    </p>
+                                </div>
+                                <div class="timeline-media">
+                                    <img src="imagenes/munumento laguito.jpg"
+                                        alt="Monumento en el Parque El Laguito de Sogamoso" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ★ Evento: Saliendo del Cole ★ -->
+                    <article class="timeline-event" data-year="Estación 2" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-year-badge">Saliendo del Colegio</div>
+                            <div class="timeline-body">
+                                <div class="timeline-text">
+                                    <h3>Saliendo del Cole — Inicio del Recorrido</h3>
+                                    <p>
+                                        Inicio del programa de visitas estudiantiles a sitios patrimoniales.
+                                        Los estudiantes salen del colegio con entusiasmo para descubrir los
+                                        tesoros históricos de su ciudad, convirtiendo cada calle en un aula abierta.
+                                    </p>
+                                </div>
+                                <div class="timeline-media">
+                                    <img src="imagenes/saliendo del cole.jpg"
+                                        alt="Estudiantes saliendo del colegio para visita patrimonial" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ★ Evento: Primera Estación ★ -->
+                    <article class="timeline-event" data-year="Estación 3" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-year-badge">Primera Estación</div>
+                            <div class="timeline-body">
+                                <div class="timeline-text">
+                                    <h3>Nuestra Primera Estación — Descubriendo el Patrimonio</h3>
+                                    <p>
+                                        En la primera estación del recorrido, los estudiantes se encuentran con los
+                                        primeros vestigios de la historia sogamoseña. Cada paso revela una nueva
+                                        capa de significado cultural, y los guías comparten relatos que conectan
+                                        el pasado con el presente.
+                                    </p>
+                                </div>
+                                <div class="timeline-media">
+                                    <img src="imagenes/Nuestra primera estacion.jpg"
+                                        alt="Primera estación del recorrido patrimonial" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ★ Evento: Visitas Virtuales (2020) ★ -->
+                    <article class="timeline-event" data-year="2020" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-year-badge">2020 — Visitas Virtuales</div>
+                            <div class="timeline-body">
+                                <div class="timeline-text">
+                                    <h3>Visitas Virtuales — Adaptación durante la Pandemia</h3>
+                                    <p>
+                                        Adaptación del programa con recorridos virtuales durante la pandemia.
+                                        Gracias a la tecnología, los estudiantes pudieron continuar explorando el
+                                        patrimonio desde casa, demostrando que la curiosidad no tiene barreras.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ★ Evento: Retorno Presencial (2021) ★ -->
+                    <article class="timeline-event" data-year="2021" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-year-badge">2021 — Retorno Presencial</div>
+                            <div class="timeline-body">
+                                <div class="timeline-text">
+                                    <h3>Retorno Presencial — Volvemos a Explorar</h3>
+                                    <p>
+                                        Reanudación de las visitas presenciales con protocolos de bioseguridad.
+                                        La emoción de volver a pisar los lugares históricos renovó el compromiso
+                                        de los estudiantes con la conservación patrimonial.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ★ Evento: Rutas Temáticas (2022) ★ -->
+                    <article class="timeline-event" data-year="2022" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-year-badge">2022 — Rutas Temáticas</div>
+                            <div class="timeline-body">
+                                <div class="timeline-text">
+                                    <h3>Rutas Temáticas — Explorando por Categorías</h3>
+                                    <p>
+                                        Implementación de rutas especializadas por temas históricos y culturales:
+                                        arquitectura religiosa, espacios públicos, gastronomía ancestral y
+                                        expresiones culturales vivas. Cada ruta ofrece un enfoque diferente del
+                                        mismo territorio.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ★ Evento: Proyectos Estudiantiles (2023) ★ -->
+                    <article class="timeline-event" data-year="2023" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-year-badge">2023 — Proyectos Estudiantiles</div>
+                            <div class="timeline-body">
+                                <div class="timeline-text">
+                                    <h3>Proyectos Estudiantiles — Investigadores en Acción</h3>
+                                    <p>
+                                        Los estudiantes se convierten en investigadores y presentan sus propios
+                                        proyectos sobre patrimonio local: documentales, ensayos fotográficos,
+                                        maquetas y presentaciones multimedia que reflejan su conexión con la ciudad.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ★ Evento: Nuevas Rutas (2024) ★ -->
+                    <article class="timeline-event" data-year="2024" role="listitem">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-year-badge">2024 — Nuevas Rutas</div>
+                            <div class="timeline-body">
+                                <div class="timeline-text">
+                                    <h3>Nuevas Rutas — Zonas Restauradas</h3>
+                                    <p>
+                                        Exploración de zonas recientemente restauradas y puestas en valor.
+                                        El ciclo se renueva con nuevos descubrimientos, nuevas historias y
+                                        una nueva generación de guardianes del patrimonio sogamoseño.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="modern-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>SOY PATRIMONIO</h3>
+                <p>
+                    Plataforma educativa interactiva diseñada para que los niños descubran,
+                    valoren y protejan el patrimonio histórico y cultural.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/soypatrimonio" class="social-link" aria-label="Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explorar</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="mapa-historico.html"><i class="fas fa-map-marker-alt"></i> Mapa Histórico</a></li>
+                    <li><a href="rincon-estudiantil.html"><i class="fas fa-graduation-cap"></i> Rincón Estudiantil</a>
+                    </li>
+                    <li><a href="Explorando -ciudad.html"><i class="fas fa-city"></i> Explorando la Ciudad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Colegios</h3>
+                <ul class="footer-links">
+                    <li><a href="san-martin-menu.html"><i class="fas fa-university"></i> San Martín de Tours</a></li>
+                    <li><a href="sugamuxi-menu.html"><i class="fas fa-school"></i> Colegio Sugamuxi</a></li>
+                    <li><a href="inceandes-menu.html"><i class="fas fa-school"></i> Colegio Inceandes</a></li>
+                    <li><a href="producion_cientifica.html"><i class="fas fa-flask"></i> Producción Científica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:info@soypatrimonio.org"><i class="fas fa-envelope"></i>
+                            info@soypatrimonio.org</a></li>
+                    <li><a href="tel:+573001234567"><i class="fas fa-phone"></i> +57 300 123 4567</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Sogamoso, Boyacá</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Soy Patrimonio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/global.js"></script>
+    <script src="js/Explorando ciudad .js"></script>
+</body>
+
+</html>

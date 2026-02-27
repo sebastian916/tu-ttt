@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Proyectos estudiantiles del Colegio San Martín de Tours - Soy Patrimonio Sogamoso">
+    <title>San Martín de Tours - Soy Patrimonio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/san-martin-menu.css">
+
+    <link rel="icon" href="imagenes/logo_icon.ico">
+</head>
+
+<body>
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <!-- HEADER GLOBAL -->
+    <header class="modern-header" role="banner">
+        <div class="header-container">
+            <a href="index.html" class="logo-container" aria-label="Soy Patrimonio - Inicio">
+                <div class="logo-icon" aria-hidden="true">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <!-- ★★★ Cambiar aquí el título por imagen ★★★ -->
+                <!-- <img src="assets/img/header.png" alt="Soy Patrimonio Logo" class="logo-img"> -->
+                <div class="logo-text">
+                    <h1>SOY PATRIMONIO</h1>
+                    <span>Sogamoso - Descubre, Aprende y Protege</span>
+                </div>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </button>
+
+            <nav class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mapa-historico.html" class="nav-link">
+                            <i class="fas fa-map-marked-alt"></i> Mapa Histórico
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rincon-estudiantil.html" class="nav-link active">
+                            <i class="fas fa-graduation-cap"></i>
+                            Rincón Estudiantil
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="submenu">
+                            <a href="san-martin-menu.html" class="submenu-link active">
+                                <i class="fas fa-university"></i>
+                                San Martín de Tours
+                            </a>
+                            <a href="sugamuxi-menu.html" class="submenu-link">
+                                <i class="fas fa-school"></i>
+                                Colegio Sugamuxi
+                            </a>
+
+                            <!-- INICIO: Submenú Incandes de tercer nivel -->
+                            <div class="submenu-item has-submenu">
+                                <a href="inceandes-menu.html" class="submenu-link">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Colegio Inceandes
+                                    <i class="fas fa-chevron-right submenu-arrow" aria-hidden="true"></i>
+                                </a>
+                                <!-- Submenú de tercer nivel - Incandes -->
+                                <div class="submenu-third-level" role="menu" aria-label="Submenú Incandes">
+                                    <a href="inceandes-incandes.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-fire" aria-hidden="true"></i>
+                                        Incandes
+                                    </a>
+                                    <a href="inceandes-comunidad.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-users" aria-hidden="true"></i>
+                                        Comunidad
+                                    </a>
+                                    <a href="inceandes-logros.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-trophy" aria-hidden="true"></i>
+                                        Logros
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- FIN: Submenú Incandes de tercer nivel -->
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Explorando -ciudad.html" class="nav-link">
+                            <i class="fas fa-city"></i> Explorando la Ciudad
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="producion_cientifica.html" class="nav-link">
+                            <i class="fas fa-flask"></i> Producción Científica
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="school-logo">
+                <i class="fas fa-university"></i>
+            </div>
+            <h1 class="hero-title" id="hero-title">SAN MARTÍN DE TOURS</h1>
+            <p class="hero-subtitle">
+                Proyectos destacados sobre la recuperación y valoración del patrimonio cultural
+                sogamoseño, desarrollados con pasión por nuestros estudiantes.
+            </p>
+        </div>
+
+        <div class="scroll-indicator">
+            <span class="span-arrow"></span>
+            <span class="span-arrow"></span>
+            <span class="span-arrow"></span>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="breadcrumb">
+            <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="rincon-estudiantil.html">Rincón Estudiantil</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>San Martín de Tours</span>
+        </div>
+
+        <h2 class="section-title">PROYECTOS DESTACADOS</h2>
+
+        <div class="proyectos-grid">
+            <!-- Proyecto Destacado: Juan Lorenzo -->
+            <article class="proyecto-card">
+                <div class="card-image-container">
+                    <img src="imagenes/Soggamoso.png" alt="Juan Lorenzo Alcantus" class="proyecto-img">
+                    <div class="card-category">Historia Local</div>
+                </div>
+                <div class="card-content">
+                    <h3>Juan Lorenzo Alcantus</h3>
+                    <p class="card-description">
+                        Proyecto de investigación histórica sobre patrimonio cultural desarrollado por
+                        el estudiante del Colegio San Martín de Tours.
+                    </p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> Grado 11</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                    <a href="proyecto-juan-lorenzo.html" class="btn-ver-mas">Leer Proyecto <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Proyecto: Antigua Estación del Tren -->
+            <article class="proyecto-card">
+                <div class="card-image-container">
+                    <img src="imagenes/estacion_tren.jpg" alt="Estación del Tren" class="proyecto-img">
+                    <div class="card-category">Patrimonio Industrial</div>
+                </div>
+                <div class="card-content">
+                    <h3>Antigua Estación del Tren</h3>
+                    <p class="card-description">
+                        Recuperación de la memoria histórica del ferrocarril en Sogamoso y su impacto
+                        en el desarrollo económico de la región.
+                    </p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> Grado 9-A</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                    <a href="#" class="btn-ver-mas">Leer Investigación <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>SOY PATRIMONIO</h3>
+                <p>
+                    Plataforma educativa para descubrir y proteger el patrimonio histórico
+                    y cultural de Sogamoso, Boyacá.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explorar</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="mapa-historico.html"><i class="fas fa-map-marker-alt"></i> Mapa Histórico</a></li>
+                    <li><a href="rincon-estudiantil.html"><i class="fas fa-graduation-cap"></i> Rincón Estudiantil</a>
+                    </li>
+                    <li><a href="Explorando -ciudad.html"><i class="fas fa-city"></i> Explorando la Ciudad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Colegios</h3>
+                <ul class="footer-links">
+                    <li><a href="san-martin-menu.html"><i class="fas fa-university"></i> San Martín de Tours</a></li>
+                    <li><a href="sugamuxi-menu.html"><i class="fas fa-school"></i> Colegio Sugamuxi</a></li>
+                    <li><a href="inceandes-menu.html"><i class="fas fa-school"></i> Colegio Inceandes</a></li>
+                    <li><a href="producion_cientifica.html"><i class="fas fa-flask"></i> Producción Científica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-envelope"></i> info@soypatrimonio.org</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> +57 123 456 7890</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Sogamoso, Boyacá</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="footer-bottom-content">
+                <p>&copy; <span id="current-year">2025</span> Soy Patrimonio - Sogamoso. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/global.js"></script>
+    <script src="js/san-martin-menu.js"></script>
+</body>
+
+</html>

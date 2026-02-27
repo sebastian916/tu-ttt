@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Forro Estudiantil del Colegio Sugamuxi - Galería multimedia de imágenes, videos y audios. Soy Patrimonio Sogamoso.">
+    <meta name="theme-color" content="#2c3e50">
+    <title>Colegio Sugamuxi - Forro Estudiantil | Soy Patrimonio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/Sugamuxi-menu.css">
+
+    <link rel="icon" href="imagenes/logo_icon.ico">
+</head>
+
+<body>
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <!-- HEADER GLOBAL -->
+    <header class="modern-header" role="banner">
+        <div class="header-container">
+            <a href="index.html" class="logo-container" aria-label="Soy Patrimonio - Inicio">
+                <div class="logo-icon" aria-hidden="true">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <!-- ★★★ Cambiar aquí el título por imagen ★★★ -->
+                <!-- <img src="assets/img/header.png" alt="Soy Patrimonio Logo" class="logo-img"> -->
+                <div class="logo-text">
+                    <h1>SOY PATRIMONIO</h1>
+                    <span>Sogamoso - Descubre, Aprende y Protege</span>
+                </div>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </button>
+
+            <nav class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mapa-historico.html" class="nav-link">
+                            <i class="fas fa-map-marked-alt"></i> Mapa Histórico
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rincon-estudiantil.html" class="nav-link active">
+                            <i class="fas fa-graduation-cap"></i>
+                            Rincón Estudiantil
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="submenu">
+                            <a href="san-martin-menu.html" class="submenu-link">
+                                <i class="fas fa-university"></i>
+                                San Martín de Tours
+                            </a>
+                            <a href="sugamuxi-menu.html" class="submenu-link active">
+                                <i class="fas fa-school"></i>
+                                Colegio Sugamuxi
+                            </a>
+
+                            <!-- INICIO: Submenú Incandes de tercer nivel -->
+                            <div class="submenu-item has-submenu">
+                                <a href="inceandes-menu.html" class="submenu-link">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Colegio Inceandes
+                                    <i class="fas fa-chevron-right submenu-arrow" aria-hidden="true"></i>
+                                </a>
+                                <!-- Submenú de tercer nivel - Incandes -->
+                                <div class="submenu-third-level" role="menu" aria-label="Submenú Incandes">
+                                    <a href="inceandes-incandes.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-fire" aria-hidden="true"></i>
+                                        Incandes
+                                    </a>
+                                    <a href="inceandes-comunidad.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-users" aria-hidden="true"></i>
+                                        Comunidad
+                                    </a>
+                                    <a href="inceandes-logros.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-trophy" aria-hidden="true"></i>
+                                        Logros
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- FIN: Submenú Incandes de tercer nivel -->
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Explorando -ciudad.html" class="nav-link">
+                            <i class="fas fa-city"></i> Explorando la Ciudad
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="producion_cientifica.html" class="nav-link">
+                            <i class="fas fa-flask"></i> Producción Científica
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="school-logo">
+                <i class="fas fa-school"></i>
+            </div>
+            <h1 class="hero-title" id="hero-title">COLEGIO SUGAMUXI</h1>
+            <p class="hero-subtitle">
+                Forro Estudiantil — Explora la creatividad y el talento de nuestros estudiantes
+                a través de imágenes, videos y audios que preservan la cultura y el patrimonio de Sogamoso.
+            </p>
+        </div>
+
+        <div class="scroll-indicator">
+            <span class="span-arrow"></span>
+            <span class="span-arrow"></span>
+            <span class="span-arrow"></span>
+        </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <div class="breadcrumb">
+            <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="rincon-estudiantil.html">Rincón Estudiantil</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Colegio Sugamuxi</span>
+        </div>
+
+        <h2 class="section-title">FORRO ESTUDIANTIL</h2>
+        <p class="section-description">
+            Galería multimedia con los trabajos y producciones de los estudiantes del Colegio Sugamuxi.
+            Filtra por tipo de contenido para explorar imágenes, videos y audios.
+        </p>
+
+        <!-- FILTROS DE PESTAÑAS -->
+        <div class="filter-tabs" role="tablist" aria-label="Filtrar por tipo de contenido">
+            <button class="filter-tab active" data-filter="todos" role="tab" aria-selected="true">
+                <i class="fas fa-th-large"></i> Todos
+            </button>
+            <button class="filter-tab" data-filter="imagen" role="tab" aria-selected="false">
+                <i class="fas fa-image"></i> Imágenes
+            </button>
+            <button class="filter-tab" data-filter="video" role="tab" aria-selected="false">
+                <i class="fas fa-video"></i> Videos
+            </button>
+            <button class="filter-tab" data-filter="audio" role="tab" aria-selected="false">
+                <i class="fas fa-music"></i> Audios
+            </button>
+        </div>
+
+        <!-- CONTADOR DE RESULTADOS -->
+        <div class="results-counter">
+            <span id="results-count">9</span> contenidos encontrados
+        </div>
+
+        <!-- GRID DE CONTENIDOS MULTIMEDIA -->
+        <div class="media-grid" id="mediaGrid">
+
+            <!-- ====== IMÁGENES (PNG) ====== -->
+
+            <!-- Imagen 1 -->
+            <article class="media-card" data-type="imagen">
+                <div class="card-media-container">
+                    <div class="placeholder-media img-placeholder">
+                        <i class="fas fa-image"></i>
+                        <span>Imagen PNG</span>
+                    </div>
+                    <div class="media-badge imagen-badge">
+                        <i class="fas fa-image"></i> PNG
+                    </div>
+                    <div class="media-overlay">
+                        <button class="btn-preview" aria-label="Ver imagen completa">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Patrimonio Arquitectónico</h3>
+                    <p class="card-description">
+                        Fotografía del patrimonio arquitectónico de Sogamoso capturada por estudiantes.
+                    </p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> Estudiante Grado 11</span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Imagen 2 -->
+            <article class="media-card" data-type="imagen">
+                <div class="card-media-container">
+                    <div class="placeholder-media img-placeholder">
+                        <i class="fas fa-camera"></i>
+                        <span>Imagen PNG</span>
+                    </div>
+                    <div class="media-badge imagen-badge">
+                        <i class="fas fa-image"></i> PNG
+                    </div>
+                    <div class="media-overlay">
+                        <button class="btn-preview" aria-label="Ver imagen completa">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Tradiciones Culturales</h3>
+                    <p class="card-description">
+                        Registro fotográfico de las tradiciones culturales de la comunidad sogamoseña.
+                    </p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> Estudiante Grado 10</span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Imagen 3 -->
+            <article class="media-card" data-type="imagen">
+                <div class="card-media-container">
+                    <div class="placeholder-media img-placeholder">
+                        <i class="fas fa-mountain"></i>
+                        <span>Imagen PNG</span>
+                    </div>
+                    <div class="media-badge imagen-badge">
+                        <i class="fas fa-image"></i> PNG
+                    </div>
+                    <div class="media-overlay">
+                        <button class="btn-preview" aria-label="Ver imagen completa">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Paisajes de Sogamoso</h3>
+                    <p class="card-description">
+                        Imágenes del paisaje natural y urbano que rodea la ciudad del sol y del acero.
+                    </p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> Estudiante Grado 9</span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ====== VIDEOS (MP4) ====== -->
+
+            <!-- Video 1 -->
+            <article class="media-card" data-type="video">
+                <div class="card-media-container">
+                    <div class="placeholder-media video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Video MP4</span>
+                    </div>
+                    <div class="media-badge video-badge">
+                        <i class="fas fa-video"></i> MP4
+                    </div>
+                    <div class="media-overlay">
+                        <button class="btn-preview btn-play" aria-label="Reproducir video">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="video-duration">
+                        <i class="fas fa-clock"></i> 03:45
+                    </div>
+                    <h3>Documental del Templo del Sol</h3>
+                    <p class="card-description">
+                        Documental estudiantil sobre la historia y significado del Templo del Sol
+                        en la cultura muisca.
+                    </p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> Equipo Grado 11</span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Video 2 -->
+            <article class="media-card" data-type="video">
+                <div class="card-media-container">
+                    <div class="placeholder-media video-placeholder">
+                        <i class="fas fa-film"></i>
+                        <span>Video MP4</span>
+                    </div>
+                    <div class="media-badge video-badge">
+                        <i class="fas fa-video"></i> MP4
+                    </div>
+                    <div class="media-overlay">
+                        <button class="btn-preview btn-play" aria-label="Reproducir video">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="video-duration">
+                        <i class="fas fa-clock"></i> 05:20
+                    </div>
+                    <h3>Entrevistas Patrimonio Vivo</h3>
+                    <p class="card-description">
+                        Entrevistas a adultos mayores de Sogamoso sobre las tradiciones y costumbres
+                        que marcaron su juventud.
+                    </p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> Equipo Grado 10</span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Video 3 -->
+            <article class="media-card" data-type="video">
+                <div class="card-media-container">
+                    <div class="placeholder-media video-placeholder">
+                        <i class="fas fa-video"></i>
+                        <span>Video MP4</span>
+                    </div>
+                    <div class="media-badge video-badge">
+                        <i class="fas fa-video"></i> MP4
+                    </div>
+                    <div class="media-overlay">
+                        <button class="btn-preview btn-play" aria-label="Reproducir video">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="video-duration">
+                        <i class="fas fa-clock"></i> 02:15
+                    </div>
+                    <h3>Recorrido por la Plaza de la Villa</h3>
+                    <p class="card-description">
+                        Recorrido guiado por la Plaza de la Villa y sus alrededores, narrando la
+                        historia de cada edificación.
+                    </p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> Estudiante Grado 9</span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ====== AUDIOS (MP3) ====== -->
+
+            <!-- Audio 1 -->
+            <article class="media-card" data-type="audio">
+                <div class="card-media-container audio-container">
+                    <div class="placeholder-media audio-placeholder">
+                        <div class="audio-visualizer">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <div class="media-badge audio-badge">
+                        <i class="fas fa-music"></i> MP3
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="audio-player-mini">
+                        <button class="btn-audio-play" aria-label="Reproducir audio">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="audio-progress">
+                            <div class="audio-progress-bar"></div>
+                        </div>
+                        <span class="audio-time">02:30</span>
+                    </div>
+                    <h3>Relatos Orales de Sogamoso</h3>
+                    <p class="card-description">
+                        Recopilación de relatos orales de los habitantes más antiguos de Sogamoso
+                        sobre la historia de la ciudad.
+                    </p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> Estudiante Grado 11</span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Audio 2 -->
+            <article class="media-card" data-type="audio">
+                <div class="card-media-container audio-container">
+                    <div class="placeholder-media audio-placeholder">
+                        <div class="audio-visualizer">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="media-badge audio-badge">
+                        <i class="fas fa-music"></i> MP3
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="audio-player-mini">
+                        <button class="btn-audio-play" aria-label="Reproducir audio">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="audio-progress">
+                            <div class="audio-progress-bar"></div>
+                        </div>
+                        <span class="audio-time">04:15</span>
+                    </div>
+                    <h3>Podcast: Historia Muisca</h3>
+                    <p class="card-description">
+                        Podcast estudiantil que narra los orígenes de la cultura muisca en el
+                        territorio de Sogamoso.
+                    </p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> Equipo Grado 10</span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Audio 3 -->
+            <article class="media-card" data-type="audio">
+                <div class="card-media-container audio-container">
+                    <div class="placeholder-media audio-placeholder">
+                        <div class="audio-visualizer">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <i class="fas fa-podcast"></i>
+                    </div>
+                    <div class="media-badge audio-badge">
+                        <i class="fas fa-music"></i> MP3
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="audio-player-mini">
+                        <button class="btn-audio-play" aria-label="Reproducir audio">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="audio-progress">
+                            <div class="audio-progress-bar"></div>
+                        </div>
+                        <span class="audio-time">03:50</span>
+                    </div>
+                    <h3>Canciones Tradicionales</h3>
+                    <p class="card-description">
+                        Grabaciones de canciones y melodías tradicionales interpretadas por los
+                        estudiantes del colegio.
+                    </p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-user"></i> Coro Grado 9</span>
+                        <span><i class="fas fa-calendar"></i> 2025</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- MENSAJE SIN RESULTADOS -->
+        <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No hay contenidos en esta categoría</h3>
+            <p>Pronto se agregarán más contenidos. ¡Vuelve a visitarnos!</p>
+        </div>
+
+        <!-- BOTÓN VOLVER -->
+        <div class="back-container">
+            <a href="rincon-estudiantil.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Volver a Rincón Estudiantil
+            </a>
+        </div>
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>SOY PATRIMONIO</h3>
+                <p>
+                    Plataforma educativa para descubrir y proteger el patrimonio histórico
+                    y cultural de Sogamoso, Boyacá.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explorar</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="mapa-historico.html"><i class="fas fa-map-marker-alt"></i> Mapa Histórico</a></li>
+                    <li><a href="rincon-estudiantil.html"><i class="fas fa-graduation-cap"></i> Rincón Estudiantil</a>
+                    </li>
+                    <li><a href="Explorando -ciudad.html"><i class="fas fa-city"></i> Explorando la Ciudad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Colegios</h3>
+                <ul class="footer-links">
+                    <li><a href="san-martin-menu.html"><i class="fas fa-university"></i> San Martín de Tours</a></li>
+                    <li><a href="sugamuxi-menu.html"><i class="fas fa-school"></i> Colegio Sugamuxi</a></li>
+                    <li><a href="inceandes-menu.html"><i class="fas fa-school"></i> Colegio Inceandes</a></li>
+                    <li><a href="producion_cientifica.html"><i class="fas fa-flask"></i> Producción Científica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-envelope"></i> info@soypatrimonio.org</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> +57 123 456 7890</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Sogamoso, Boyacá</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="footer-bottom-content">
+                <p>&copy; <span id="current-year">2025</span> Soy Patrimonio - Sogamoso. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/global.js"></script>
+    <script src="js/Sugamuxi-menu.js"></script>
+</body>
+
+</html>

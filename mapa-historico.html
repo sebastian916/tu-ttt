@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Histórico de Sogamoso - Soy Patrimonio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos Globales -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Estilos Específicos -->
+    <link rel="stylesheet" href="css/mapa-historico.css">
+
+    <link rel="icon" href="imagenes/logo_icon.ico">
+</head>
+
+<body>
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <!-- HEADER GLOBAL -->
+    <header class="modern-header" role="banner">
+        <div class="header-container">
+            <a href="index.html" class="logo-container" aria-label="Soy Patrimonio - Inicio">
+                <div class="logo-icon" aria-hidden="true">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <!-- ★★★ Cambiar aquí el título por imagen ★★★ -->
+                <!-- <img src="assets/img/header.png" alt="Soy Patrimonio Logo" class="logo-img"> -->
+                <div class="logo-text">
+                    <h1>SOY PATRIMONIO</h1>
+                    <span>Sogamoso - Descubre, Aprende y Protege</span>
+                </div>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </button>
+
+            <nav class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="mapa-historico.html" class="nav-link active">
+                            <i class="fas fa-map-marked-alt"></i> Mapa Histórico
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rincon-estudiantil.html" class="nav-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            Rincón Estudiantil
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="submenu">
+                            <a href="san-martin-menu.html" class="submenu-link">
+                                <i class="fas fa-university"></i>
+                                San Martín de Tours
+                            </a>
+                            <a href="sugamuxi-menu.html" class="submenu-link">
+                                <i class="fas fa-school"></i>
+                                Colegio Sugamuxi
+                            </a>
+
+                            <!-- INICIO: Submenú Incandes de tercer nivel -->
+                            <div class="submenu-item has-submenu">
+                                <a href="inceandes-menu.html" class="submenu-link">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Colegio Inceandes
+                                    <i class="fas fa-chevron-right submenu-arrow" aria-hidden="true"></i>
+                                </a>
+                                <!-- Submenú de tercer nivel - Incandes -->
+                                <div class="submenu-third-level" role="menu" aria-label="Submenú Incandes">
+                                    <a href="inceandes-incandes.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-fire" aria-hidden="true"></i>
+                                        Incandes
+                                    </a>
+                                    <a href="inceandes-comunidad.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-users" aria-hidden="true"></i>
+                                        Comunidad
+                                    </a>
+                                    <a href="inceandes-logros.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-trophy" aria-hidden="true"></i>
+                                        Logros
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- FIN: Submenú Incandes de tercer nivel -->
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Explorando -ciudad.html" class="nav-link">
+                            <i class="fas fa-city"></i> Explorando la Ciudad
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="producion_cientifica.html" class="nav-link">
+                            <i class="fas fa-flask"></i> Producción Científica
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">MAPA HISTÓRICO DE SOGAMOSO</h1>
+            <p class="hero-subtitle">
+                Explora el patrimonio cultural de Sogamoso. Descubre sitios históricos,
+                monumentos y lugares emblemáticos de la Ciudad del Sol.
+            </p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="breadcrumb">
+            <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+            <i class="fas fa-chevron-right"></i>
+            <span><i class="fas fa-map-marked-alt"></i> Mapa Histórico</span>
+        </div>
+
+        <h1 class="page-title">PATRIMONIO CULTURAL DE SOGAMOSO</h1>
+        <p class="page-subtitle">
+            Explora el patrimonio cultural de Sogamoso. ¡Haz clic en los iconos para ver la imagen y descripción de cada
+            lugar!
+        </p>
+
+        <div class="mapa-container">
+            <div class="card card-mapa">
+                <h2 class="card-title" id="tituloPrincipal">
+                    <i class="fas fa-map-marked-alt"></i>
+                    Mapa de Sogamoso
+                </h2>
+
+                <div class="mapa-wrapper">
+
+                    <div class="mapa-basico" id="historicalMap">
+                        <!-- Mapa principal -->
+                        <img src="imagenes/Mapa_Sogamoso.jpeg" alt="Mapa de Sogamoso" class="mapa-imagen"
+                            id="mapaImagen">
+
+                        <!-- Contenedor oculto con TODAS las imágenes y descripciones -->
+                        <div class="contenedor-imagenes-lugares" style="display: none;">
+                            <!-- Templo del Sol -->
+                            <div id="detalles-templo-sol" class="detalle-lugar">
+                                <div class="imagen-lugar-container">
+                                    <img src="imagenes/Soggamoso.png" alt="Templo del Sol" class="mapa-imagen">
+                                </div>
+                                <div class="descripcion-lugar">
+                                    <div class="categoria-lugar">
+                                        <i class="fas fa-sun"></i>
+                                        Patrimonio Religioso
+                                    </div>
+                                    <h3>Templo del Sol - Sogamoso</h3>
+                                    <p>El Templo del Sol era el centro religioso más importante del Imperio Muisca.
+                                        Según la tradición, era el lugar donde el Cacique de Sogamoso, conocido como el
+                                        'Iraca', ejercía su autoridad religiosa sobre todos los muiscas. Fue destruido
+                                        por los españoles en 1537 y posteriormente se construyó la Catedral en su lugar.
+                                    </p>
+                                    <div class="datos-lista-contenedor">
+                                        <div class="dato-item">🏛️ Época: Precolombina (Imperio Muisca)</div>
+                                        <div class="dato-item">📍 Ubicación original: Donde hoy está la Catedral</div>
+                                        <div class="dato-item">🔥 Destrucción: 1537 por los conquistadores españoles
+                                        </div>
+                                        <div class="dato-item">👑 Sacerdote máximo: El Iraca de Sogamoso</div>
+                                        <div class="dato-item">🎭 Ceremonias: Culto al Sol y a la Luna</div>
+                                        <div class="dato-item">📜 Importancia: Centro religioso de los muiscas</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Catedral -->
+                            <div id="detalles-catedral" class="detalle-lugar">
+                                <div class="imagen-lugar-container">
+                                    <img src="imagenes/catedral.jpg" alt="Catedral de Sogamoso" class="mapa-imagen">
+                                </div>
+                                <div class="descripcion-lugar">
+                                    <div class="categoria-lugar">
+                                        <i class="fas fa-church"></i>
+                                        Patrimonio Religioso
+                                    </div>
+                                    <h3>Catedral de Sogamoso</h3>
+                                    <p>La Catedral de Santiago Apóstol de Sogamoso, construida sobre las ruinas del
+                                        Templo del Sol, es uno de los edificios religiosos más importantes de Boyacá. Su
+                                        arquitectura combina elementos coloniales y republicanos, reflejando la historia
+                                        de la ciudad desde la conquista hasta la actualidad.</p>
+                                    <div class="datos-lista-contenedor">
+                                        <div class="dato-item">⛪ Construcción: Siglo XVI sobre el Templo del Sol</div>
+                                        <div class="dato-item">🏛️ Estilo: Colonial y republicano</div>
+                                        <div class="dato-item">📏 Dimensiones: 65 metros de largo, 25 de ancho</div>
+                                        <div class="dato-item">🔔 Campanas: 5 campanas históricas del siglo XVIII</div>
+                                        <div class="dato-item">🎨 Retablo: Tallado en madera y dorado a la hoja</div>
+                                        <div class="dato-item">📅 Festividad: 25 de julio (Santiago Apóstol)</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Parque Laguito -->
+                            <div id="detalles-parque-laguito" class="detalle-lugar">
+                                <div class="imagen-lugar-container">
+                                    <img src="imagenes/parque-laguito.jpg" alt="Parque Laguito" class="mapa-imagen">
+                                </div>
+                                <div class="descripcion-lugar">
+                                    <div class="categoria-lugar">
+                                        <i class="fas fa-water"></i>
+                                        Patrimonio Natural
+                                    </div>
+                                    <h3>Parque El Laguito</h3>
+                                    <p>El Parque El Laguito es un espacio natural y recreativo en el corazón de
+                                        Sogamoso. Con su lago artificial, áreas verdes y senderos peatonales, es un
+                                        lugar ideal para el esparcimiento familiar y actividades al aire libre.</p>
+                                    <div class="datos-lista-contenedor">
+                                        <div class="dato-item">🌳 Área: 5 hectáreas de espacio verde</div>
+                                        <div class="dato-item">💧 Lago artificial: 2,500 m² de superficie</div>
+                                        <div class="dato-item">🏃‍♂️ Senderos: 1.5 km de caminos peatonales</div>
+                                        <div class="dato-item">🌺 Jardines: Jardines ornamentales y florales</div>
+                                        <div class="dato-item">🎡 Recreación: Zonas infantiles y deportivas</div>
+                                        <div class="dato-item">🕒 Horario: 6:00 AM - 6:00 PM diariamente</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Museo Arqueológico -->
+                            <div id="detalles-museo" class="detalle-lugar">
+                                <div class="imagen-lugar-container">
+                                    <img src="imagenes/museo.jpg" alt="Museo Arqueológico de Sogamoso"
+                                        class="mapa-imagen">
+                                </div>
+                                <div class="descripcion-lugar">
+                                    <div class="categoria-lugar">
+                                        <i class="fas fa-landmark"></i>
+                                        Patrimonio Cultural
+                                    </div>
+                                    <h3>Museo Arqueológico de Sogamoso</h3>
+                                    <p>El Museo Arqueológico de Sogamoso, también conocido como Museo del Oro Templo del
+                                        Sol, alberga una de las colecciones más importantes de artefactos muiscas.
+                                        Incluye objetos de oro, cerámica y textiles que muestran la riqueza cultural del
+                                        pueblo muisca.</p>
+                                    <div class="datos-lista-contenedor">
+                                        <div class="dato-item">🏛️ Inauguración: 1942 por el padre Vicente Restrepo
+                                        </div>
+                                        <div class="dato-item">📊 Colección: Más de 5,000 piezas arqueológicas</div>
+                                        <div class="dato-item">💰 Oro: 500 piezas de orfebrería muisca</div>
+                                        <div class="dato-item">🏺 Cerámica: 2,000 piezas de diferentes períodos</div>
+                                        <div class="dato-item">👥 Visitantes: 50,000 anuales en promedio</div>
+                                        <div class="dato-item">🎓 Programa educativo: Visitas guiadas para colegios
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Teatro Sogamoso -->
+                            <div id="detalles-teatro" class="detalle-lugar">
+                                <div class="imagen-lugar-container">
+                                    <img src="imagenes/teatro.jpg" alt="Teatro Sogamoso" class="mapa-imagen">
+                                </div>
+                                <div class="descripcion-lugar">
+                                    <div class="categoria-lugar">
+                                        <i class="fas fa-theater-masks"></i>
+                                        Patrimonio Cultural
+                                    </div>
+                                    <h3>Teatro Sogamoso</h3>
+                                    <p>El Teatro Sogamoso es el principal escenario cultural de la ciudad. Con capacidad
+                                        para más de 500 personas, acoge obras teatrales, conciertos, conferencias y
+                                        eventos culturales de toda índole.</p>
+                                    <div class="datos-lista-contenedor">
+                                        <div class="dato-item">🎭 Capacidad: 550 butacas</div>
+                                        <div class="dato-item">🏛️ Inauguración: 1985</div>
+                                        <div class="dato-item">🎪 Escenario: 12m x 8m con equipamiento profesional</div>
+                                        <div class="dato-item">🌟 Programación: Teatro, danza, música y cine</div>
+                                        <div class="dato-item">🎓 Formación: Talleres artísticos para la comunidad</div>
+                                        <div class="dato-item">📅 Temporada: Programación cultural permanente</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Biblioteca Municipal -->
+                            <div id="detalles-biblioteca" class="detalle-lugar">
+                                <div class="imagen-lugar-container">
+                                    <img src="imagenes/biblioteca.jpg" alt="Biblioteca Municipal de Sogamoso"
+                                        class="mapa-imagen">
+                                </div>
+                                <div class="descripcion-lugar">
+                                    <div class="categoria-lugar">
+                                        <i class="fas fa-book"></i>
+                                        Patrimonio Cultural
+                                    </div>
+                                    <h3>Biblioteca Municipal de Sogamoso</h3>
+                                    <p>La Biblioteca Municipal de Sogamoso es un centro cultural y educativo que
+                                        promueve la lectura y el aprendizaje en la comunidad. Ofrece servicios de
+                                        préstamo de libros, salas de estudio y actividades culturales.</p>
+                                    <div class="datos-lista-contenedor">
+                                        <div class="dato-item">📚 Colección: Más de 15,000 libros</div>
+                                        <div class="dato-item">🏢 Construcción: Año 1995</div>
+                                        <div class="dato-item">💻 Servicios: Internet gratuito, salas digitales</div>
+                                        <div class="dato-item">👥 Usuarios: 500 visitas mensuales promedio</div>
+                                        <div class="dato-item">🎭 Actividades: Club de lectura, talleres culturales
+                                        </div>
+                                        <div class="dato-item">📅 Horario: Lunes a viernes 8:00 AM - 6:00 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Plaza 6 de Septiembre -->
+                            <div id="detalles-plaza-6-septiembre" class="detalle-lugar">
+                                <div class="imagen-lugar-container">
+                                    <img src="imagenes/plaza-seis.jpg" alt="Plaza 6 de Septiembre" class="mapa-imagen">
+                                </div>
+                                <div class="descripcion-lugar">
+                                    <div class="categoria-lugar">
+                                        <i class="fas fa-flag"></i>
+                                        Espacios Públicos
+                                    </div>
+                                    <h3>Plaza 6 de Septiembre</h3>
+                                    <p>La Plaza 6 de Septiembre conmemora importantes eventos históricos de Sogamoso. Es
+                                        un espacio público que sirve como punto de encuentro ciudadano y escenario de
+                                        actividades culturales y cívicas.</p>
+                                    <div class="datos-lista-contenedor">
+                                        <div class="dato-item">🗓️ Inauguración: 6 de septiembre de 1950</div>
+                                        <div class="dato-item">📍 Ubicación: Centro histórico de Sogamoso</div>
+                                        <div class="dato-item">🎖️ Conmemora: Batalla de Boyacá y hechos locales</div>
+                                        <div class="dato-item">⛲ Monumentos: Obelisco central y placas conmemorativas
+                                        </div>
+                                        <div class="dato-item">🎪 Eventos: Actividades cívicas y culturales</div>
+                                        <div class="dato-item">🌳 Entorno: Rodeada de edificios históricos</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Plaza de la Villa -->
+                            <div id="detalles-plaza-villa" class="detalle-lugar">
+                                <div class="imagen-lugar-container">
+                                    <img src="imagenes/munumento laguito.jpg" alt="Plaza de la Villa"
+                                        class="mapa-imagen">
+                                </div>
+                                <div class="descripcion-lugar">
+                                    <div class="categoria-lugar">
+                                        <i class="fas fa-monument"></i>
+                                        Espacios Públicos
+                                    </div>
+                                    <h3>Parque de la Villa - Parque Principal</h3>
+                                    <p>El Parque Principal de Sogamoso, conocido como Parque de la Villa, es el corazón
+                                        de la ciudad desde la época colonial. Rodeado de edificios históricos, ha sido
+                                        testigo de importantes eventos históricos y es el punto de encuentro social y
+                                        cultural de los sogamoseños.</p>
+                                    <div class="datos-lista-contenedor">
+                                        <div class="dato-item">🌳 Fundación: Siglo XVI con la fundación de la ciudad
+                                        </div>
+                                        <div class="dato-item">🗺️ Ubicación: Centro histórico de Sogamoso</div>
+                                        <div class="dato-item">⛲ Fuente: Instalada en 1890, restaurada en 2005</div>
+                                        <div class="dato-item">🌲 Árboles: Varias especies nativas centenarias</div>
+                                        <div class="dato-item">🎪 Eventos: Feria del Sol, festivales culturales</div>
+                                        <div class="dato-item">🏛️ Alrededores: Alcaldía, Catedral, edificios coloniales
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Puntos del mapa (iconos interactivos) -->
+                        <div class="puntos-container">
+                            <!-- Templo del Sol -->
+                            <div class="punto-mapa" style="top: 25%; left: 35%;"
+                                onclick="mostrarDetallesPopup('templo-sol')">
+                                <div class="marcador" style="background-color: #e74c3c;">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <div class="etiqueta-mapa">Templo del Sol</div>
+                            </div>
+
+                            <!-- Catedral -->
+                            <div class="punto-mapa" style="top: 30%; left: 65%;"
+                                onclick="mostrarDetallesPopup('catedral')">
+                                <div class="marcador" style="background-color: #3498db;">
+                                    <i class="fas fa-church"></i>
+                                </div>
+                                <div class="etiqueta-mapa">Catedral</div>
+                            </div>
+
+                            <!-- Parque Laguito -->
+                            <div class="punto-mapa" style="top: 55%; left: 75%;"
+                                onclick="mostrarDetallesPopup('parque-laguito')">
+                                <div class="marcador" style="background-color: #1abc9c;">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <div class="etiqueta-mapa">Parque Laguito</div>
+                            </div>
+
+                            <!-- Museo Arqueológico -->
+                            <div class="punto-mapa" style="top: 40%; left: 20%;"
+                                onclick="mostrarDetallesPopup('museo')">
+                                <div class="marcador" style="background-color: #f39c12;">
+                                    <i class="fas fa-landmark"></i>
+                                </div>
+                                <div class="etiqueta-mapa">Museo Arqueológico</div>
+                            </div>
+
+                            <!-- Teatro Sogamoso -->
+                            <div class="punto-mapa" style="top: 70%; left: 65%;"
+                                onclick="mostrarDetallesPopup('teatro')">
+                                <div class="marcador" style="background-color: #9b59b6;">
+                                    <i class="fas fa-theater-masks"></i>
+                                </div>
+                                <div class="etiqueta-mapa">Teatro Sogamoso</div>
+                            </div>
+
+                            <!-- Biblioteca Municipal -->
+                            <div class="punto-mapa" style="top: 15%; left: 50%;"
+                                onclick="mostrarDetallesPopup('biblioteca')">
+                                <div class="marcador" style="background-color: #3498db;">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="etiqueta-mapa">Biblioteca Municipal</div>
+                            </div>
+
+                            <!-- Plaza 6 de Septiembre -->
+                            <div class="punto-mapa" style="top: 75%; left: 30%;"
+                                onclick="mostrarDetallesPopup('plaza-6-septiembre')">
+                                <div class="marcador" style="background-color: #e74c3c;">
+                                    <i class="fas fa-flag"></i>
+                                </div>
+                                <div class="etiqueta-mapa">Plaza 6 de Septiembre</div>
+                            </div>
+
+                            <!-- Plaza de la Villa -->
+                            <div class="punto-mapa" style="top: 65%; left: 45%;"
+                                onclick="mostrarDetallesPopup('plaza-villa')">
+                                <div class="marcador" style="background-color: #e67e22;">
+                                    <i class="fas fa-monument"></i>
+                                </div>
+                                <div class="etiqueta-mapa">Plaza de la Villa</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controles-mapa" id="controlesMapa">
+                    <button class="control-btn" onclick="zoomIn()">
+                        <i class="fas fa-search-plus"></i> Acercar
+                    </button>
+                    <button class="control-btn" onclick="zoomOut()">
+                        <i class="fas fa-search-minus"></i> Alejar
+                    </button>
+                    <button class="control-btn secundario" onclick="resetMap()">
+                        <i class="fas fa-sync-alt"></i> Restablecer
+                    </button>
+                    <button class="control-btn" onclick="crearRutaTuristica()">
+                        <i class="fas fa-route"></i> Ruta Turística
+                    </button>
+                    <button class="control-btn" onclick="mostrarTodos()">
+                        <i class="fas fa-eye"></i> Mostrar Todos
+                    </button>
+                </div>
+            </div>
+
+            <div class="card card-categorias">
+                <h2 class="card-title">
+                    <i class="fas fa-layer-group"></i>
+                    Categorías Patrimoniales
+                </h2>
+
+                <div class="capas-container">
+                    <h3 class="capas-titulo">
+                        <i class="fas fa-filter"></i>
+                        Filtra por categoría
+                    </h3>
+
+                    <div class="capas-lista">
+                        <div class="capa-item activa" onclick="activarCapa('cultural')" id="capa-cultural">
+                            <div class="capa-icono">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <div class="capa-contenido">
+                                <h4>Patrimonio Cultural</h4>
+                                <p>Museos, teatros y espacios culturales</p>
+                                <div class="capa-contador" id="contador-cultural">3 lugares</div>
+                            </div>
+                        </div>
+
+                        <div class="capa-item activa" onclick="activarCapa('publico')" id="capa-publico">
+                            <div class="capa-icono">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="capa-contenido">
+                                <h4>Espacios Públicos</h4>
+                                <p>Plazas, parques y edificios públicos</p>
+                                <div class="capa-contador" id="contador-publico">2 lugares</div>
+                            </div>
+                        </div>
+
+                        <div class="capa-item activa" onclick="activarCapa('natural')" id="capa-natural">
+                            <div class="capa-icono">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <div class="capa-contenido">
+                                <h4>Patrimonio Natural</h4>
+                                <p>Parques y espacios naturales</p>
+                                <div class="capa-contador" id="contador-natural">1 lugar</div>
+                            </div>
+                        </div>
+
+                        <div class="capa-item activa" onclick="activarCapa('religioso')" id="capa-religioso">
+                            <div class="capa-icono">
+                                <i class="fas fa-church"></i>
+                            </div>
+                            <div class="capa-contenido">
+                                <h4>Patrimonio Religioso</h4>
+                                <p>Templos e iglesias históricas</p>
+                                <div class="capa-contador" id="contador-religioso">2 lugares</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-rapida">
+                    <div class="info-icono">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="info-contenido">
+                        <h4>¡Explora el Mapa!</h4>
+                        <ul>
+                            <li><strong>Haz clic</strong> en los iconos para ver detalles del lugar</li>
+                            <li><strong>El popup se adapta</strong> automáticamente al contenido</li>
+                            <li><strong>Usa las categorías</strong> para filtrar los puntos de interés</li>
+                            <li><strong>Comparte</strong> los lugares que más te gusten</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-mapa">
+            <h3>
+                <i class="fas fa-star"></i>
+                Patrimonio Cultural de Sogamoso
+            </h3>
+            <p>
+                Sogamoso, conocida como la "Ciudad del Sol", posee un rico patrimonio cultural que refleja
+                su historia desde tiempos precolombinos hasta la actualidad. Descubre estos tesoros que
+                hacen única a nuestra ciudad.
+            </p>
+
+            <div class="detalles-lista">
+                <div class="detalle-item">
+                    <div class="detalle-icono">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div class="detalle-contenido">
+                        <h4>Historia Milenaria</h4>
+                        <p>Sogamoso fue un importante centro religioso y astronómico muisca. Los primeros asentamientos
+                            datan del siglo VI d.C.</p>
+                    </div>
+                </div>
+
+                <div class="detalle-item">
+                    <div class="detalle-icono">
+                        <i class="fas fa-archway"></i>
+                    </div>
+                    <div class="detalle-contenido">
+                        <h4>Arquitectura Colonial</h4>
+                        <p>Conserva edificios coloniales que muestran la historia arquitectónica desde el siglo XVI
+                            hasta el XIX.</p>
+                    </div>
+                </div>
+
+                <div class="detalle-item">
+                    <div class="detalle-icono">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="detalle-contenido">
+                        <h4>Naturaleza y Cultura</h4>
+                        <p>Parques y reservas naturales que son parte de nuestro patrimonio ecológico y cultural.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controles-mapa">
+                <a href="index.html" class="control-btn secundario">
+                    <i class="fas fa-arrow-left"></i> Volver al Inicio
+                </a>
+                <button class="control-btn" onclick="compartirMapa()">
+                    <i class="fas fa-share-alt"></i> Compartir Mapa
+                </button>
+                <button class="control-btn" onclick="descargarGuia()">
+                    <i class="fas fa-download"></i> Guía Turística
+                </button>
+            </div>
+        </div>
+
+        <!-- ========== CONTENEDOR EMERGENTE (POPUP) ========== -->
+        <div id="popupContainer" class="popup-overlay">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <h3 id="popupTitulo">Patrimonio Cultural de Sogamoso</h3>
+                    <button id="closePopup" class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="popup-body">
+                    <div class="image-container">
+                        <img id="popupImagen" src="" alt="Patrimonio Cultural de Sogamoso" class="popup-image">
+                    </div>
+
+                    <div class="description-container">
+                        <div class="category-badge" id="popupCategoria">
+                            <i class="fas fa-landmark"></i> Patrimonio Cultural
+                        </div>
+                        <h4 id="popupLugar">Nombre del Lugar</h4>
+                        <p id="popupDescripcion">Descripción detallada del patrimonio cultural de Sogamoso.</p>
+                        <div id="popupDatos" class="datos-popup"></div>
+                    </div>
+                </div>
+
+                <div class="popup-footer">
+                    <button class="popup-btn compartir">
+                        <i class="fas fa-share-alt"></i> Compartir
+                    </button>
+                    <button class="popup-btn favorito">
+                        <i class="fas fa-heart"></i> Favorito
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>SOY PATRIMONIO</h3>
+                <p>
+                    Plataforma educativa para descubrir y proteger el patrimonio histórico
+                    y cultural de Sogamoso, Boyacá.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explorar</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="mapa-historico.html"><i class="fas fa-map-marker-alt"></i> Mapa Histórico</a></li>
+                    <li><a href="rincon-estudiantil.html"><i class="fas fa-graduation-cap"></i> Rincón Estudiantil</a>
+                    </li>
+                    <li><a href="Explorando -ciudad.html"><i class="fas fa-city"></i> Explorando la Ciudad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Colegios</h3>
+                <ul class="footer-links">
+                    <li><a href="san-martin-menu.html"><i class="fas fa-university"></i> San Martín de Tours</a></li>
+                    <li><a href="sugamuxi-menu.html"><i class="fas fa-school"></i> Colegio Sugamuxi</a></li>
+                    <li><a href="inceandes-menu.html"><i class="fas fa-school"></i> Colegio Inceandes</a></li>
+                    <li><a href="producion_cientifica.html"><i class="fas fa-flask"></i> Producción Científica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-envelope"></i> info@soypatrimonio.org</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> +57 123 456 7890</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Sogamoso, Boyacá</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Soy Patrimonio - Sogamoso. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/global.js"></script>
+    <script src="js/mapa-historico.js"></script>
+</body>
+
+</html>

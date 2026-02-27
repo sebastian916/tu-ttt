@@ -1,0 +1,441 @@
+/* ============================================
+   EXPLORANDO -CIUDAD.CSS — Estilos de la página Explorando la Ciudad
+   
+   Estilos globales en css/global.css.
+   Este archivo contiene: Hero inline, Timeline vertical con eventos alternados.
+   ============================================ */
+
+/* ============================================
+   HERO — Inline (usa estilos de inicio.css hero-section)
+   ============================================ */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 120px 20px 80px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.8)),
+        url('../imagenes/plaza-villa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    background: linear-gradient(to right, #fff, #ffd166);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    margin-bottom: 30px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* ============================================
+   TIMELINE SECTION — Línea de tiempo vertical
+   ============================================ */
+.timeline-section {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #f4f6f8 0%, #ffffff 50%, #f4f6f8 100%);
+    position: relative;
+}
+
+.timeline-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #666;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Línea central */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg,
+            var(--accent-color) 0%,
+            var(--primary-color) 30%,
+            var(--secondary-color) 70%,
+            var(--accent-color) 100%);
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+/* Evento individual */
+.timeline-event {
+    position: relative;
+    width: 50%;
+    padding: 0 50px 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-event.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Alternar izquierda / derecha */
+.timeline-event:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-event:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* Contenido alineado */
+/* Content Style */
+.timeline-content {
+    background: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-event:nth-child(odd) .timeline-text {
+    text-align: right;
+}
+
+.timeline-event:nth-child(even) .timeline-text {
+    text-align: left;
+}
+
+/* Marcador circular en la línea */
+.timeline-marker {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 2;
+    box-shadow: 0 5px 20px rgba(44, 62, 80, 0.3);
+    transition: all 0.3s ease;
+}
+
+.timeline-event:hover .timeline-marker {
+    transform: scale(1.15);
+    box-shadow: 0 8px 30px rgba(44, 62, 80, 0.4);
+    background: var(--gradient-secondary);
+}
+
+.timeline-event:nth-child(odd) .timeline-marker {
+    right: -25px;
+}
+
+.timeline-event:nth-child(even) .timeline-marker {
+    left: -25px;
+}
+
+/* Tarjeta del evento */
+.timeline-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Badge de año */
+.timeline-year-badge {
+    padding: 12px 20px;
+    background: var(--gradient-primary);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Cuerpo de la tarjeta */
+.timeline-body {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+
+.timeline-text {
+    padding: 25px;
+    flex: 1;
+}
+
+.timeline-text h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.timeline-text p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.timeline-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Imagen del evento */
+.timeline-media {
+    flex: 0 0 280px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.timeline-card:hover .timeline-media img {
+    transform: scale(1.05);
+}
+
+/* Decoración: conectores al marcador */
+.timeline-event:nth-child(odd)::after,
+.timeline-event:nth-child(even)::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    width: 25px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+.timeline-event:nth-child(odd)::after {
+    right: 0;
+}
+
+.timeline-event:nth-child(even)::after {
+    left: 0;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .timeline-media {
+        flex: 0 0 220px;
+    }
+
+    .timeline-event {
+        padding: 0 40px 50px;
+    }
+}
+
+/* Tablet y móvil: timeline en columna única */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+        padding: 100px 15px 60px;
+    }
+
+    .timeline-section {
+        padding: 60px 15px;
+    }
+
+    .section-subtitle {
+        margin-bottom: 40px;
+    }
+
+    /* Timeline vertical alineada a la izquierda */
+    .timeline::before {
+        left: 25px;
+        transform: none;
+    }
+
+    .timeline-event,
+    .timeline-event:nth-child(odd),
+    .timeline-event:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding: 0 0 40px 65px;
+        text-align: left;
+    }
+
+    .timeline-event:nth-child(odd) .timeline-text,
+    .timeline-event:nth-child(even) .timeline-text {
+        text-align: left;
+    }
+
+    .timeline-event:nth-child(odd) .timeline-body,
+    .timeline-event:nth-child(even) .timeline-body {
+        flex-direction: column;
+    }
+
+    .timeline-event:nth-child(odd) .timeline-marker,
+    .timeline-event:nth-child(even) .timeline-marker {
+        left: 0;
+        right: auto;
+    }
+
+    .timeline-event:nth-child(odd)::after,
+    .timeline-event:nth-child(even)::after {
+        left: 50px;
+        right: auto;
+        width: 15px;
+    }
+
+    .timeline-marker {
+        width: 50px;
+        height: 50px;
+    }
+
+    .timeline-media {
+        flex: none;
+        width: 100%;
+        max-height: 250px;
+    }
+
+    .timeline-text {
+        padding: 20px;
+    }
+
+    .timeline-text h3 {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        min-height: 50vh;
+        padding: 90px 10px 40px;
+    }
+
+    .timeline-section {
+        padding: 40px 10px;
+    }
+
+    .timeline-event,
+    .timeline-event:nth-child(odd),
+    .timeline-event:nth-child(even) {
+        padding: 0 0 30px 55px;
+    }
+
+    .timeline-marker {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-event:nth-child(odd)::after,
+    .timeline-event:nth-child(even)::after {
+        left: 40px;
+    }
+
+    .timeline-year-badge {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .timeline-text h3 {
+        font-size: 1.05rem;
+    }
+
+    .timeline-text p {
+        font-size: 0.93rem;
+    }
+
+    .timeline-media {
+        max-height: 200px;
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .timeline-event {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .timeline-card:hover .timeline-media img {
+        transform: none;
+    }
+}
+
+/* Impresión */
+@media print {
+    .timeline::before {
+        background: #999;
+    }
+
+    .timeline-event {
+        break-inside: avoid;
+        opacity: 1;
+        transform: none;
+    }
+
+    .timeline-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

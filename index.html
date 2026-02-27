@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Soy Patrimonio — Plataforma educativa interactiva para descubrir, explorar y proteger el patrimonio histórico y cultural de Sogamoso.">
+    <meta name="theme-color" content="#2c3e50">
+
+    <title>Soy Patrimonio — Descubre y Protege tu Historia</title>
+
+    <!-- Fuentes e iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos: Global (compartido) + Página inicio -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/inicio.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/logo_icon.ico">
+</head>
+
+<body>
+
+    <!-- ============================================
+         LOADER — Pantalla de carga
+         ============================================ -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <h2>Cargando Soy Patrimonio...</h2>
+        </div>
+    </div>
+
+    <!-- ============================================
+         PARTÍCULAS FLOTANTES — Fondo decorativo
+         Se generan dinámicamente vía js/global.js
+         ============================================ -->
+    <div class="particles-container" aria-hidden="true">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <!-- ============================================
+         HEADER — Navegación principal
+         
+         ★ PERSONALIZACIÓN: Para cambiar el título por una imagen de logo,
+           reemplaza el bloque <div class="logo-text"> con la línea de imagen.
+           Ejemplo comentado abajo.
+         ============================================ -->
+    <header class="modern-header" role="banner">
+        <div class="header-container">
+            <a href="index.html" class="logo-container" aria-label="Soy Patrimonio - Inicio">
+                <div class="logo-icon" aria-hidden="true">
+                    <i class="fas fa-landmark"></i>
+                </div>
+
+                <!-- ★★★ Cambiar aquí el título por imagen ★★★
+                     Para usar una imagen de logo en vez del texto, comenta o elimina
+                     el bloque <div class="logo-text"> de abajo y descomenta la línea <img>.
+                     Coloca tu imagen en: assets/img/header.png
+                -->
+                <!-- <img src="assets/img/header.png" alt="Soy Patrimonio Logo" class="logo-img"> -->
+
+                <div class="logo-text">
+                    <h1>SOY PATRIMONIO</h1>
+                    <span>Sogamoso - Descubre, Aprende y Protege</span>
+                </div>
+            </a>
+
+            <!-- Navegación con submenú -->
+            <nav class="nav-container" aria-label="Navegación principal">
+                <ul class="nav-menu" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="index.html" class="nav-link active" role="menuitem">
+                            <i class="fas fa-home"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="mapa-historico.html" class="nav-link" role="menuitem">
+                            <i class="fas fa-map-marked-alt"></i> Mapa Histórico
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none" aria-haspopup="true">
+                        <a href="rincon-estudiantil.html" class="nav-link" role="menuitem" aria-expanded="false">
+                            <i class="fas fa-graduation-cap"></i>
+                            Rincón Estudiantil
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <div class="submenu" role="menu" aria-label="Submenú Rincón Estudiantil">
+                            <a href="san-martin-menu.html" class="submenu-link" role="menuitem">
+                                <i class="fas fa-university" aria-hidden="true"></i>
+                                San Martín de Tours
+                            </a>
+                            <a href="sugamuxi-menu.html" class="submenu-link" role="menuitem">
+                                <i class="fas fa-school" aria-hidden="true"></i>
+                                Colegio Sugamuxi
+                            </a>
+
+                            <!-- INICIO: Submenú Incandes de tercer nivel -->
+                            <div class="submenu-item has-submenu">
+                                <a href="inceandes-menu.html" class="submenu-link" role="menuitem">
+                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                    Colegio Inceandes
+                                    <i class="fas fa-chevron-right submenu-arrow" aria-hidden="true"></i>
+                                </a>
+                                <!-- Submenú de tercer nivel - Incandes -->
+                                <div class="submenu-third-level" role="menu" aria-label="Submenú Incandes">
+                                    <a href="inceandes-incandes.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-fire" aria-hidden="true"></i>
+                                        Incandes
+                                    </a>
+                                    <a href="inceandes-comunidad.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-users" aria-hidden="true"></i>
+                                        Comunidad
+                                    </a>
+                                    <a href="inceandes-logros.html" class="submenu-link-third-level" role="menuitem">
+                                        <i class="fas fa-trophy" aria-hidden="true"></i>
+                                        Logros
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- FIN: Submenú Incandes de tercer nivel -->
+                        </div>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="Explorando -ciudad.html" class="nav-link" role="menuitem">
+                            <i class="fas fa-city"></i> Explorando la Ciudad
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="producion_cientifica.html" class="nav-link" role="menuitem">
+                            <i class="fas fa-flask"></i> Producción Científica
+                        </a>
+                    </li>
+
+
+                </ul>
+            </nav>
+
+            <!-- Botón hamburguesa para menú móvil -->
+            <button class="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION — Presentación principal
+         ============================================ -->
+    <main>
+        <section class="hero-section" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title" class="hero-title">SOY PATRIMONIO</h1>
+                <p class="hero-subtitle">
+                    Una experiencia interactiva única donde los niños descubren, exploran y se convierten en
+                    guardianes del patrimonio histórico y cultural de nuestra comunidad.
+                </p>
+                <a href="#explorar" class="cta-button">
+                    <i class="fas fa-play-circle" aria-hidden="true"></i>
+                    COMENZAR AVENTURA
+                </a>
+            </div>
+        </section>
+
+        <!-- ============================================
+             FEATURES — ¿Qué vas a descubrir?
+             ============================================ -->
+        <section class="features-section" id="explorar" aria-labelledby="features-title">
+            <h2 id="features-title" class="section-title">¿Qué vas a Descubrir?</h2>
+            <div class="features-grid">
+                <!-- Tarjeta: Mapa Histórico -->
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Mapa Histórico Interactivo</h3>
+                    <p>
+                        Explora los lugares más importantes de nuestra ciudad a través de un mapa interactivo
+                        con tres capas temáticas: arquitectura religiosa, espacios públicos y rutas patrimoniales.
+                    </p>
+                    <a href="mapa-historico.html" class="feature-link">
+                        Explorar Mapa
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </article>
+
+                <!-- Tarjeta: Rincón Estudiantil -->
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Rincón Estudiantil</h3>
+                    <p>
+                        Sube tus trabajos, investigaciones y proyectos. Comparte lo que has aprendido sobre
+                        nuestro patrimonio y recibe insignias digitales por tus aportes.
+                    </p>
+                    <a href="rincon-estudiantil.html" class="feature-link">
+                        Ver Trabajos
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </article>
+
+                <!-- Tarjeta: Galería Multimedia -->
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Galería Multimedia</h3>
+                    <p>
+                        Una colección visual de fotos, videos y documentos históricos. Aprende a través
+                        de material multimedia y contribuye con tus propias creaciones.
+                    </p>
+                    <a href="#" class="feature-link">
+                        Ver Galería
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============================================
+             PREVIEW — Experiencia Interactiva
+             ============================================ -->
+        <section class="preview-section" aria-labelledby="preview-title">
+            <div class="preview-container">
+                <div class="preview-content">
+                    <h2 id="preview-title">Una Experiencia Interactiva</h2>
+                    <p>
+                        Soy Patrimonio no es solo una página web, es una aventura educativa. Con tecnología
+                        moderna, interfaces intuitivas y contenido adaptado para niños, hacemos que el
+                        aprendizaje del patrimonio sea emocionante y memorable.
+                    </p>
+                    <a href="https://youtu.be/Lw54UqvlOqY?feature=shared" class="cta-button cta-button--light"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-video" aria-hidden="true"></i>
+                        VER DEMO
+                    </a>
+                </div>
+                <div class="preview-interactive" aria-hidden="true">
+                    <div class="floating-device">
+                        <div class="device-screen">
+                            <div class="screen-content">
+                                <h3>Explora en Tiempo Real</h3>
+                                <p>Interactúa con el mapa histórico y descubre secretos ocultos de cada lugar.</p>
+                                <div class="screen-badges">
+                                    <span class="screen-badge screen-badge--red">Interactivo</span>
+                                    <span class="screen-badge screen-badge--blue">Educativo</span>
+                                    <span class="screen-badge screen-badge--green">Divertido</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CONTADORES — Estadísticas del proyecto
+             ============================================ -->
+        <section class="counter-section" aria-label="Estadísticas del proyecto">
+            <div class="counter-grid">
+                <div class="counter-item">
+                    <div class="counter-number" id="mapPoints">0</div>
+                    <div class="counter-text">Puntos Históricos</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="studentWorks">0</div>
+                    <div class="counter-text">Trabajos Estudiantiles</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="activeUsers">0</div>
+                    <div class="counter-text">Exploradores Activos</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="badgesAwarded">0</div>
+                    <div class="counter-text">Insignias Otorgadas</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             TESTIMONIOS — Lo que dicen los exploradores
+             ============================================ -->
+        <section class="testimonials-section" aria-labelledby="testimonials-title">
+            <h2 id="testimonials-title" class="section-title">Lo que Dicen Nuestros Exploradores</h2>
+            <div class="testimonial-slider">
+                <blockquote class="testimonial-card">
+                    <p class="testimonial-text">
+                        Gracias a Soy Patrimonio, ahora conozco la historia de mi ciudad de una forma divertida.
+                        Mi lugar favorito es la Catedral, ¡aprendí que tiene más de 200 años!
+                    </p>
+                    <cite class="testimonial-author">— María, 10 años</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================
+         FOOTER — Pie de página
+         ★ Para modificar enlaces o textos del footer, edita directamente aquí.
+         ============================================ -->
+    <footer class="modern-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>SOY PATRIMONIO</h3>
+                <p>
+                    Plataforma educativa interactiva diseñada para que los niños descubran,
+                    valoren y protejan el patrimonio histórico y cultural.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/soypatrimonio" class="social-link" aria-label="Facebook"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explorar</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Inicio</a></li>
+                    <li><a href="mapa-historico.html"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Mapa
+                            Histórico</a></li>
+                    <li><a href="rincon-estudiantil.html"><i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            Rincón Estudiantil</a></li>
+                    <li><a href="Explorando -ciudad.html"><i class="fas fa-city" aria-hidden="true"></i> Explorando la
+                            Ciudad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Experiencias</h3>
+                <ul class="footer-links">
+                    <li><a href="san-martin-menu.html"><i class="fas fa-university" aria-hidden="true"></i> San Martín
+                            de Tours</a></li>
+                    <li><a href="sugamuxi-menu.html"><i class="fas fa-school" aria-hidden="true"></i> Colegio
+                            Sugamuxi</a></li>
+                    <li><a href="inceandes-menu.html"><i class="fas fa-school" aria-hidden="true"></i> Colegio
+                            Inceandes</a></li>
+                    <li><a href="producion_cientifica.html"><i class="fas fa-flask" aria-hidden="true"></i> Producción
+                            Científica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:info@soypatrimonio.org"><i class="fas fa-envelope" aria-hidden="true"></i>
+                            info@soypatrimonio.org</a></li>
+                    <li><a href="tel:+573001234567"><i class="fas fa-phone" aria-hidden="true"></i> +57 300 123 4567</a>
+                    </li>
+                    <li><a href="https://maps.google.com/?q=Sogamoso,Boyacá" target="_blank"
+                            rel="noopener noreferrer"><i class="fas fa-map" aria-hidden="true"></i> Sogamoso,
+                            Colombia</a></li>
+                    <li><a href="#"><i class="fas fa-school" aria-hidden="true"></i> Para Colegios</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Soy Patrimonio. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                Diseñado con <i class="fas fa-heart" aria-hidden="true" style="color: var(--secondary-color);"></i> para
+                las futuras generaciones de guardianes del patrimonio.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts: Global (compartido) + Página inicio -->
+    <script src="js/global.js"></script>
+    <script src="js/inicio.js"></script>
+</body>
+
+</html>

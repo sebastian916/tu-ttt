@@ -1,0 +1,278 @@
+/* ===== PROYECTO ESPECÍFICO — Juan Lorenzo Alcantus ===== */
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    background: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+    /* Using global variable */
+}
+
+.breadcrumb a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.breadcrumb i {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.breadcrumb span {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.proyecto-hero {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 60px 40px;
+    border-radius: var(--border-radius);
+    margin-bottom: 50px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.proyecto-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.proyecto-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.proyecto-title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #fff, #ffd166);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.proyecto-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.proyecto-badges {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--gradient-secondary);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.badge-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+@media (min-width: 992px) {
+    .content-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.content-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 1.2s ease-out;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-secondary);
+    border-radius: 2px;
+}
+
+.section-title i {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.content-card p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+.content-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.content-card li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.content-card li:last-child {
+    border-bottom: none;
+}
+
+.content-card li i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.video-section {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 1.4s ease-out;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 30px 0;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* AQUÍ ES DONDE PONES el  VIDEO  */
+.video-real {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+/* AQUÍ TERMINA LA SECCIÓN DE el VIDEO */
+
+.video-info {
+    text-align: center;
+    padding: 20px;
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.video-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.video-info p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+    background: var(--gradient-secondary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Los estilos del footer ahora se heredan de global.css */
