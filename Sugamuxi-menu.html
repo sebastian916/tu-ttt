@@ -168,20 +168,18 @@
         <!-- GRID DE CONTENIDOS MULTIMEDIA -->
         <div class="media-grid" id="mediaGrid">
 
-            <!-- ====== IMÁGENES (PNG) ====== -->
+            <!-- ====== IMÁGENES (PNG/JPG) ====== -->
 
             <!-- Imagen 1 -->
             <article class="media-card" data-type="imagen">
                 <div class="card-media-container">
-                    <div class="placeholder-media img-placeholder">
-                        <i class="fas fa-image"></i>
-                        <span>Imagen PNG</span>
-                    </div>
+                    <img src="imagenes/plaza-villa.jpg" alt="Plaza de la Villa" class="media-content">
                     <div class="media-badge imagen-badge">
-                        <i class="fas fa-image"></i> PNG
+                        <i class="fas fa-image"></i> JPG
                     </div>
                     <div class="media-overlay">
-                        <button class="btn-preview" aria-label="Ver imagen completa">
+                        <button class="btn-preview" aria-label="Ver imagen completa"
+                            onclick="openLightbox('imagenes/plaza-villa.jpg', 'Plaza de la Villa - Patrimonio Arquitectónico')">
                             <i class="fas fa-expand"></i>
                         </button>
                     </div>
@@ -189,7 +187,7 @@
                 <div class="card-content">
                     <h3>Patrimonio Arquitectónico</h3>
                     <p class="card-description">
-                        Fotografía del patrimonio arquitectónico de Sogamoso capturada por estudiantes.
+                        Fotografía de la Plaza de la Villa, patrimonio arquitectónico de Sogamoso.
                     </p>
                     <div class="card-meta">
                         <span><i class="fas fa-user"></i> Estudiante Grado 11</span>
@@ -201,15 +199,14 @@
             <!-- Imagen 2 -->
             <article class="media-card" data-type="imagen">
                 <div class="card-media-container">
-                    <div class="placeholder-media img-placeholder">
-                        <i class="fas fa-camera"></i>
-                        <span>Imagen PNG</span>
-                    </div>
+                    <img src="imagenes/Nuestra primera estacion.jpg" alt="Nuestra primera estación"
+                        class="media-content">
                     <div class="media-badge imagen-badge">
-                        <i class="fas fa-image"></i> PNG
+                        <i class="fas fa-image"></i> JPG
                     </div>
                     <div class="media-overlay">
-                        <button class="btn-preview" aria-label="Ver imagen completa">
+                        <button class="btn-preview" aria-label="Ver imagen completa"
+                            onclick="openLightbox('imagenes/Nuestra primera estacion.jpg', 'Nuestra Primera Estación - Tradiciones')">
                             <i class="fas fa-expand"></i>
                         </button>
                     </div>
@@ -217,7 +214,7 @@
                 <div class="card-content">
                     <h3>Tradiciones Culturales</h3>
                     <p class="card-description">
-                        Registro fotográfico de las tradiciones culturales de la comunidad sogamoseña.
+                        Registro fotográfico de las tradiciones culturales en nuestra primera estación.
                     </p>
                     <div class="card-meta">
                         <span><i class="fas fa-user"></i> Estudiante Grado 10</span>
@@ -229,23 +226,21 @@
             <!-- Imagen 3 -->
             <article class="media-card" data-type="imagen">
                 <div class="card-media-container">
-                    <div class="placeholder-media img-placeholder">
-                        <i class="fas fa-mountain"></i>
-                        <span>Imagen PNG</span>
-                    </div>
+                    <img src="imagenes/Soggamoso.png" alt="Sogamoso" class="media-content">
                     <div class="media-badge imagen-badge">
                         <i class="fas fa-image"></i> PNG
                     </div>
                     <div class="media-overlay">
-                        <button class="btn-preview" aria-label="Ver imagen completa">
+                        <button class="btn-preview" aria-label="Ver imagen completa"
+                            onclick="openLightbox('imagenes/Soggamoso.png', 'Logo de Sogamoso')">
                             <i class="fas fa-expand"></i>
                         </button>
                     </div>
                 </div>
                 <div class="card-content">
-                    <h3>Paisajes de Sogamoso</h3>
+                    <h3>Símbolos de Sogamoso</h3>
                     <p class="card-description">
-                        Imágenes del paisaje natural y urbano que rodea la ciudad del sol y del acero.
+                        Representación gráfica y simbólica de la ciudad del sol y del acero.
                     </p>
                     <div class="card-meta">
                         <span><i class="fas fa-user"></i> Estudiante Grado 9</span>
@@ -259,27 +254,19 @@
             <!-- Video 1 -->
             <article class="media-card" data-type="video">
                 <div class="card-media-container">
-                    <div class="placeholder-media video-placeholder">
-                        <i class="fas fa-play-circle"></i>
-                        <span>Video MP4</span>
-                    </div>
+                    <video controls class="media-content" poster="imagenes/munumento laguito.jpg">
+                        <!-- <source src="videos/documental.mp4" type="video/mp4"> -->
+                        Tu navegador no soporta el elemento de video.
+                    </video>
                     <div class="media-badge video-badge">
                         <i class="fas fa-video"></i> MP4
                     </div>
-                    <div class="media-overlay">
-                        <button class="btn-preview btn-play" aria-label="Reproducir video">
-                            <i class="fas fa-play"></i>
-                        </button>
-                    </div>
                 </div>
                 <div class="card-content">
-                    <div class="video-duration">
-                        <i class="fas fa-clock"></i> 03:45
-                    </div>
-                    <h3>Documental del Templo del Sol</h3>
+                    <h3>Documental del Monumento</h3>
                     <p class="card-description">
-                        Documental estudiantil sobre la historia y significado del Templo del Sol
-                        en la cultura muisca.
+                        Documental estudiantil sobre la historia y significado del monumento del laguito.
+                        (Video de demostración listo para cargar).
                     </p>
                     <div class="card-meta">
                         <span><i class="fas fa-user"></i> Equipo Grado 11</span>
@@ -291,26 +278,18 @@
             <!-- Video 2 -->
             <article class="media-card" data-type="video">
                 <div class="card-media-container">
-                    <div class="placeholder-media video-placeholder">
-                        <i class="fas fa-film"></i>
-                        <span>Video MP4</span>
-                    </div>
+                    <video controls class="media-content" poster="imagenes/saliendo del cole.jpg">
+                        <!-- <source src="videos/entrevistas.mp4" type="video/mp4"> -->
+                        Tu navegador no soporta el elemento de video.
+                    </video>
                     <div class="media-badge video-badge">
                         <i class="fas fa-video"></i> MP4
                     </div>
-                    <div class="media-overlay">
-                        <button class="btn-preview btn-play" aria-label="Reproducir video">
-                            <i class="fas fa-play"></i>
-                        </button>
-                    </div>
                 </div>
                 <div class="card-content">
-                    <div class="video-duration">
-                        <i class="fas fa-clock"></i> 05:20
-                    </div>
                     <h3>Entrevistas Patrimonio Vivo</h3>
                     <p class="card-description">
-                        Entrevistas a adultos mayores de Sogamoso sobre las tradiciones y costumbres
+                        Entrevistas a adultos mayores sobre las tradiciones y costumbres
                         que marcaron su juventud.
                     </p>
                     <div class="card-meta">
@@ -323,27 +302,19 @@
             <!-- Video 3 -->
             <article class="media-card" data-type="video">
                 <div class="card-media-container">
-                    <div class="placeholder-media video-placeholder">
-                        <i class="fas fa-video"></i>
-                        <span>Video MP4</span>
-                    </div>
+                    <video controls class="media-content" poster="imagenes/Mapa_Sogamoso.jpeg">
+                        <!-- <source src="videos/recorrido.mp4" type="video/mp4"> -->
+                        Tu navegador no soporta el elemento de video.
+                    </video>
                     <div class="media-badge video-badge">
                         <i class="fas fa-video"></i> MP4
                     </div>
-                    <div class="media-overlay">
-                        <button class="btn-preview btn-play" aria-label="Reproducir video">
-                            <i class="fas fa-play"></i>
-                        </button>
-                    </div>
                 </div>
                 <div class="card-content">
-                    <div class="video-duration">
-                        <i class="fas fa-clock"></i> 02:15
-                    </div>
-                    <h3>Recorrido por la Plaza de la Villa</h3>
+                    <h3>Recorrido por el Mapa Histórico</h3>
                     <p class="card-description">
-                        Recorrido guiado por la Plaza de la Villa y sus alrededores, narrando la
-                        historia de cada edificación.
+                        Recorrido guiado por el mapa histórico y sus alrededores, narrando la
+                        historia de cada ruta importante.
                     </p>
                     <div class="card-meta">
                         <span><i class="fas fa-user"></i> Estudiante Grado 9</span>
@@ -358,31 +329,17 @@
             <article class="media-card" data-type="audio">
                 <div class="card-media-container audio-container">
                     <div class="placeholder-media audio-placeholder">
-                        <div class="audio-visualizer">
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                        </div>
-                        <i class="fas fa-headphones"></i>
+                        <i class="fas fa-headphones" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                        <audio controls class="native-audio">
+                            <!-- <source src="audios/relatos.mp3" type="audio/mpeg"> -->
+                            Tu navegador no soporta el audio.
+                        </audio>
                     </div>
                     <div class="media-badge audio-badge">
                         <i class="fas fa-music"></i> MP3
                     </div>
                 </div>
                 <div class="card-content">
-                    <div class="audio-player-mini">
-                        <button class="btn-audio-play" aria-label="Reproducir audio">
-                            <i class="fas fa-play"></i>
-                        </button>
-                        <div class="audio-progress">
-                            <div class="audio-progress-bar"></div>
-                        </div>
-                        <span class="audio-time">02:30</span>
-                    </div>
                     <h3>Relatos Orales de Sogamoso</h3>
                     <p class="card-description">
                         Recopilación de relatos orales de los habitantes más antiguos de Sogamoso
@@ -399,31 +356,17 @@
             <article class="media-card" data-type="audio">
                 <div class="card-media-container audio-container">
                     <div class="placeholder-media audio-placeholder">
-                        <div class="audio-visualizer">
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                        </div>
-                        <i class="fas fa-microphone"></i>
+                        <i class="fas fa-microphone" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                        <audio controls class="native-audio">
+                            <!-- <source src="audios/podcast.mp3" type="audio/mpeg"> -->
+                            Tu navegador no soporta el audio.
+                        </audio>
                     </div>
                     <div class="media-badge audio-badge">
                         <i class="fas fa-music"></i> MP3
                     </div>
                 </div>
                 <div class="card-content">
-                    <div class="audio-player-mini">
-                        <button class="btn-audio-play" aria-label="Reproducir audio">
-                            <i class="fas fa-play"></i>
-                        </button>
-                        <div class="audio-progress">
-                            <div class="audio-progress-bar"></div>
-                        </div>
-                        <span class="audio-time">04:15</span>
-                    </div>
                     <h3>Podcast: Historia Muisca</h3>
                     <p class="card-description">
                         Podcast estudiantil que narra los orígenes de la cultura muisca en el
@@ -440,31 +383,17 @@
             <article class="media-card" data-type="audio">
                 <div class="card-media-container audio-container">
                     <div class="placeholder-media audio-placeholder">
-                        <div class="audio-visualizer">
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                        </div>
-                        <i class="fas fa-podcast"></i>
+                        <i class="fas fa-podcast" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                        <audio controls class="native-audio">
+                            <!-- <source src="audios/canciones.mp3" type="audio/mpeg"> -->
+                            Tu navegador no soporta el audio.
+                        </audio>
                     </div>
                     <div class="media-badge audio-badge">
                         <i class="fas fa-music"></i> MP3
                     </div>
                 </div>
                 <div class="card-content">
-                    <div class="audio-player-mini">
-                        <button class="btn-audio-play" aria-label="Reproducir audio">
-                            <i class="fas fa-play"></i>
-                        </button>
-                        <div class="audio-progress">
-                            <div class="audio-progress-bar"></div>
-                        </div>
-                        <span class="audio-time">03:50</span>
-                    </div>
                     <h3>Canciones Tradicionales</h3>
                     <p class="card-description">
                         Grabaciones de canciones y melodías tradicionales interpretadas por los
@@ -492,6 +421,15 @@
             </a>
         </div>
     </main>
+
+    <!-- LIGHTBOX MODAL PARA IMÁGENES -->
+    <div id="lightbox-modal" class="lightbox-overlay" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox(event, true)"><i class="fas fa-times"></i></button>
+            <img id="lightbox-img" src="" alt="Vista ampliada">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
 
     <!-- FOOTER GLOBAL -->
     <footer class="modern-footer">
